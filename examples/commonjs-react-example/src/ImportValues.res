@@ -7,10 +7,12 @@
 // ))
 // external innerStuffContents: {"x": int} = "innerStuffContents"
 
+@genType.custom("./exportValues")
+type someType2
+
 @genType.import("./exportValues")
 type someType
 
 
 // Js.log(innerStuffContents)
 Js.log("hi2")
- 

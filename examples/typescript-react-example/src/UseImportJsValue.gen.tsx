@@ -13,3 +13,5 @@ import type {stringFunction as ImportJsValue_stringFunction} from './ImportJsVal
 export const useGetProp: (x:ImportJsValue_AbsoluteValue_t) => number = UseImportJsValueBS.useGetProp;
 
 export const useTypeImportedInOtherModule: (x:ImportJsValue_stringFunction) => ImportJsValue_stringFunction = UseImportJsValueBS.useTypeImportedInOtherModule;
+
+// Hi this is the point where string is finally emitted!! VKJY

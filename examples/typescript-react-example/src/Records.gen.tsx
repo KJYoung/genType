@@ -130,3 +130,5 @@ export const testMyObj2: (x:myObj) => myObj = RecordsBS.testMyObj2;
 export const testMyRecBsAs: (x:myRecBsAs) => string[] = RecordsBS.testMyRecBsAs;
 
 export const testMyRecBsAs2: (x:myRecBsAs) => myRecBsAs = RecordsBS.testMyRecBsAs2;
+
+// Hi this is the point where string is finally emitted!! VKJY

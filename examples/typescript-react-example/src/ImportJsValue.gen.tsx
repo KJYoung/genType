@@ -23,10 +23,10 @@ import * as Curry__Es6Import from 'rescript/lib/es6/curry.js';
 const Curry: any = Curry__Es6Import;
 
 // In case of type error, check the type of 'round' in 'ImportJsValue.re' and './MyMath'.
-export const roundTypeChecked: (_1:number) => number = roundNotChecked;
+export const roundTypeChecked: (_1:number) => string = roundNotChecked;
 
 // Export 'round' early to allow circular import from the '.bs.js' file.
-export const round: unknown = roundTypeChecked as (_1:number) => number;
+export const round: unknown = roundTypeChecked as (_1:number) => string;
 
 // In case of type error, check the type of 'area' in 'ImportJsValue.re' and './MyMath'.
 export const areaTypeChecked: (_1:point) => number = areaNotChecked;
@@ -127,7 +127,7 @@ export type myNum = $$myNum;
 // tslint:disable-next-line:interface-over-type-literal
 export type polyType<a> = $$polyType<a>;
 
-export const roundedNumber: number = ImportJsValueBS.roundedNumber;
+export const roundedNumber: string = ImportJsValueBS.roundedNumber;
 
 export const areaValue: number = ImportJsValueBS.areaValue;
 
@@ -138,3 +138,5 @@ export const useGetAbs: (x:AbsoluteValue_t) => number = ImportJsValueBS.useGetAb
 export const returnedFromHigherOrder: number = ImportJsValueBS.returnedFromHigherOrder;
 
 export default $$default;
+
+// Hi this is the point where string is finally emitted!! VKJY

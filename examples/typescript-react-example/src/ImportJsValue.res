@@ -4,7 +4,8 @@
 @genType.import("./MyMath")
 external /* This is the module to import from. */
 /* Name and type of the JS value to bind to. */
-round: float => float = "round"
+// round: float => float = "round"
+round: float => string = "round"
 
 @genType
 type point = {

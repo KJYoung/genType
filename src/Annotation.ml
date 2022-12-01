@@ -33,9 +33,12 @@ let tagIsGenTypeImport s = s = "genType.import" || s = "gentype.import"
 
 let tagIsGenTypeOpaque s = s = "genType.opaque" || s = "gentype.opaque"
 
+(* Custom Annotation registered *)
+let tagIsGenTypeCustom s = s = "genType.custom" || s = "gentype.custom"
+
 let tagIsOneOfTheGenTypeAnnotations s =
   tagIsGenType s || tagIsGenTypeAs s || tagIsGenTypeImport s
-  || tagIsGenTypeOpaque s
+  || tagIsGenTypeOpaque s || tagIsGenTypeCustom s
 
 let tagIsGenTypeIgnoreInterface s =
   s = "genType.ignoreInterface" || s = "gentype.ignoreInterface"
@@ -116,6 +119,7 @@ let getBsAsInt attributes =
   | _ -> None
 
 let getAttributeImportRenaming attributes =
+  print_endline (Typedtree.attributes_toStr attributes);
   let attributeImport = attributes |> getAttributePayload tagIsGenTypeImport in
   let genTypeAsRenaming = attributes |> getGenTypeAsRenaming in
   match (attributeImport, genTypeAsRenaming) with

@@ -614,3 +614,5 @@ val mknoloc: 'a -> 'a Asttypes.loc
 val mkloc: 'a -> Location.t -> 'a Asttypes.loc
 
 val pat_bound_idents: pattern -> Ident.t list
+
+val attributes_toStr: attributes -> string

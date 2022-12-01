@@ -26,6 +26,184 @@ type partial = Partial | Total
 type attribute = Parsetree.attribute
 type attributes = attribute list
 
+
+(*  *)
+let rec expression_desc_toStr (exprDescr : Parsetree.expression_desc) : string = (
+  let pexp_constant_toStr (cons : Parsetree.constant) : string = (
+    match cons with
+      | Pconst_integer (str, _) -> "int(" ^ str  ^ ")" 
+      | Pconst_char cha -> "char(" ^ (String.make 1 cha) ^ ")"
+      | Pconst_string (str, _) -> "str(" ^ str ^ ")"
+      | Pconst_float (str, _) -> "float(" ^ str ^ ")"
+  ) in
+  match exprDescr with
+  | Pexp_ident loc -> "Pexp_ident "
+  | Pexp_constant constant -> "Pexp_constant " ^ pexp_constant_toStr constant
+  | Pexp_let (rec_flag, value_binding_list, expression)  -> "Pexp_let "
+  | Pexp_function case_list  -> "Pexp_function "
+  | Pexp_fun (arg_label , expression_option , pattern , expression)  -> "Pexp_fun "
+  | _ -> "Pexp_others "
+  (* | Pexp_apply of expression * (arg_label * expression) list  -> ""
+    (* E0 ~l1:E1 ... ~ln:En
+      li can be empty (non labeled argument) or start with '?'
+      (optional argument).
+
+      Invariant: n > 0
+    *)
+  | Pexp_match of expression * case list  -> ""
+    (* match E0 with P1 -> E1 | ... | Pn -> En *)
+  | Pexp_try of expression * case list  -> ""
+    (* try E0 with P1 -> E1 | ... | Pn -> En *)
+  | Pexp_tuple of expression list  -> ""
+    (* (E1, ..., En)
+
+      Invariant: n >= 2
+    *)
+  | Pexp_construct of Longident.t loc * expression option  -> ""
+    (* C                None
+      C E              Some E
+      C (E1, ..., En)  Some (Pexp_tuple[E1;...;En])
+    *)
+  | Pexp_variant of label * expression option  -> ""
+    (* `A             (None)
+      `A E           (Some E)
+    *)
+  | Pexp_record of (Longident.t loc * expression) list * expression option  -> ""
+    (* { l1=P1; ...; ln=Pn }     (None) 
+      { E0 with l1=P1; ...; ln=Pn }   (Some E0)
+
+      Invariant: n > 0
+    *)
+  | Pexp_field of expression * Longident.t loc
+    (* E.l *)
+  | Pexp_setfield of expression * Longident.t loc * expression
+    (* E1.l <- E2 *)
+  | Pexp_array of expression list
+    (* [| E1; ...; En |] *)
+  | Pexp_ifthenelse of expression * expression * expression option
+    (* if E1 then E2 else E3 *)
+  | Pexp_sequence of expression * expression
+    (* E1; E2 *)
+  | Pexp_while of expression * expression
+    (* while E1 do E2 done *)
+  | Pexp_for of
+  pattern *  expression * expression * direction_flag * expression
+    (* for i = E1 to E2 do E3 done      (flag = Upto)
+      for i = E1 downto E2 do E3 done  (flag = Downto)
+    *)
+  | Pexp_constraint of expression * core_type
+    (* (E : T) *)
+  | Pexp_coerce of expression * core_type option * core_type
+    (* (E :> T)        (None, T)
+      (E : T0 :> T)   (Some T0, T)
+    *)
+  | Pexp_send of expression * label loc
+    (*  E # m *)
+  | Pexp_new of Longident.t loc
+    (* new M.c *)
+  | Pexp_setinstvar of label loc * expression
+    (* x <- 2 *)
+  | Pexp_override of (label loc * expression) list
+    (* {< x1 = E1; ...; Xn = En >} *)
+  | Pexp_letmodule of string loc * module_expr * expression
+    (* let module M = ME in E *)
+  | Pexp_letexception of extension_constructor * expression
+    (* let exception C in E *)
+  | Pexp_assert of expression
+    (* assert E
+      Note: "assert false" is treated in a special way by the
+      type-checker. *)
+  | Pexp_lazy of expression
+    (* lazy E *)
+  | Pexp_poly of expression * core_type option
+    (* Used for method bodies.
+
+      Can only be used as the expression under Cfk_concrete
+      for methods (not values). *)
+  | Pexp_object of class_structure
+    (* object ... end *)
+  | Pexp_newtype of string loc * expression
+    (* fun (type t) -> E *)
+  | Pexp_pack of module_expr
+    (* (module ME)
+
+      (module ME : S) is represented as
+      Pexp_constraint(Pexp_pack, Ptyp_package S) *)
+  | Pexp_open of override_flag * Longident.t loc * expression
+    (* M.(E)
+      let open M in E
+      let! open M in E *)
+  | Pexp_extension of extension
+    (* [%id] *)
+  | Pexp_unreachable
+    . *)
+)
+and expression_toStr (expr : Parsetree.expression) : string = (
+  "{" ^ (expression_desc_toStr expr.pexp_desc) ^ " | " ^ (attributes_toStr expr.pexp_attributes)  ^ "}"
+) 
+and structure_item_toStr (structure : Parsetree.structure_item) : string = (
+  match structure.pstr_desc with
+    | Pstr_eval (expression, attributes) -> "Pstr_eval" ^ expression_toStr expression ^ " | " ^ attributes_toStr attributes
+      (* E *)
+    | Pstr_value (rec_flag, value_binding_list) -> "Pstr_value"
+      (* let P1 = E1 and ... and Pn = EN       (flag = Nonrecursive)
+        let rec P1 = E1 and ... and Pn = EN   (flag = Recursive)
+      *)
+    | Pstr_primitive value_description -> "Pstr_primitive"
+      (*  val x: T
+          external x: T = "s1" ... "sn" *)
+    | Pstr_type (rec_flag, type_declaration_list) -> "Pstr_type"
+      (* type t1 = ... and ... and tn = ... *)
+    | Pstr_typext type_extension -> "Pstr_typext"
+      (* type t1 += ... *)
+    | Pstr_exception extension_constructor -> "Pstr_exception"
+      (* exception C of T
+        exception C = M.X *)
+    | Pstr_module module_binding -> "Pstr_module"
+      (* module X = ME *)
+    | Pstr_recmodule module_binding_list -> "Pstr_recmodule"
+      (* module rec X1 = ME1 and ... and Xn = MEn *)
+    | Pstr_modtype module_type_declaration -> "Pstr_modtype"
+      (* module type S = MT *)
+    | Pstr_open open_description -> "Pstr_open"
+      (* open X *)
+    | Pstr_class unit -> "Pstr_class"
+      (* Dummy AST node *)
+    | Pstr_class_type class_type_declaration_list -> "Pstr_class_type"
+      (* class type ct1 = ... and ... and ctn = ... *)
+    | Pstr_include include_declaration -> "Pstr_include"
+      (* include ME *)
+    | Pstr_attribute attribute -> "Pstr_attribute"
+      (* [@@@id] *)
+    | Pstr_extension (extension, attributes) -> "Pstr_extension"
+      (* [%%id] *)
+) 
+and structure_toStr (structure : Parsetree.structure) : string = (
+  match structure with
+    | strHead :: strTail -> (structure_item_toStr strHead) ^ " / " ^ structure_toStr strTail 
+    | [] -> ""
+) 
+and strLoc_toStr (loc : string Asttypes.loc) : string = (
+  loc.txt
+) 
+and  payload_toStr (payload: Parsetree.payload) : string = (
+  match payload with
+    | PStr structure -> "PStr " ^ structure_toStr structure
+    | PSig signature (* : SIG *) -> "PSig"
+    | PTyp core_type  (* : T *) -> "PTyp"
+    | PPat (pattern, expressionOption)  (* ? P  or  ? P when E *) -> "PPat"
+) 
+and  attribute_toStr (attribute: Parsetree.attribute) : string = (
+  match attribute with
+    | (loc, payload) -> ("[" ^ (strLoc_toStr loc) ^ ", " ^ (payload_toStr payload) ^ "] ")
+) 
+and attributes_toStr (attributes : attributes) : string = (
+  match attributes with 
+    | atHead :: atTail -> attribute_toStr atHead ^  attributes_toStr atTail
+    | [] -> ""
+)
+(*  *)
+
 type pattern =
   { pat_desc: pattern_desc;
     pat_loc: Location.t;

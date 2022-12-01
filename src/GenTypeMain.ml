@@ -50,11 +50,19 @@ let inputCmtTranslateTypeDeclarations ~config ~outputFileRelative ~resolver
   translations |> Translation.combine
   |> Translation.addTypeDeclarationsFromModuleEquations ~typeEnv
 
+let print_cmt_annots (input : Cmt_format.binary_annots) : unit = (
+  match input with
+    | Implementation _ -> print_endline "cmt_annots - Implementation"
+    | Interface _ -> print_endline "cmt_annots Interface"
+    | _ -> print_endline "cmt_annots others"
+)
+
 let translateCMT ~config ~outputFileRelative ~resolver inputCMT : Translation.t
     =
   let {Cmt_format.cmt_annots} = inputCMT in
   let typeEnv = TypeEnv.root () in
   let translations =
+    print_cmt_annots cmt_annots;
     match cmt_annots with
     | Implementation structure ->
       structure
