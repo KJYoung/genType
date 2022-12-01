@@ -36,21 +36,21 @@ export const roundTypeChecked: (_1:number) => number = roundNotChecked;
 export const round: unknown = roundTypeChecked as (_1:number) => number;
 
 // In case of type error, check the type of 'integerValue' in 'ImportJsValue.re' and './MyMath'.
-// integerValue | TS: [Complicated or Undefined] | RES: [number]
+// integerValue | TS: [number] | RES: [number]
 export const integerValueTypeChecked: number = integerValueNotChecked;
 
 // Export 'integerValue' early to allow circular import from the '.bs.js' file.
 export const integerValue: unknown = integerValueTypeChecked as number;
 
 // In case of type error, check the type of 'floatValue' in 'ImportJsValue.re' and './MyMath'.
-// floatValue | TS: [Complicated or Undefined] | RES: [number]
+// floatValue | TS: [number] | RES: [number]
 export const floatValueTypeChecked: number = floatValueNotChecked;
 
 // Export 'floatValue' early to allow circular import from the '.bs.js' file.
 export const floatValue: unknown = floatValueTypeChecked as number;
 
 // In case of type error, check the type of 'stringValue' in 'ImportJsValue.re' and './MyMath'.
-// stringValue | TS: [Complicated or Undefined] | RES: [string]
+// stringValue | TS: [string] | RES: [string]
 export const stringValueTypeChecked: string = stringValueNotChecked;
 
 // Export 'stringValue' early to allow circular import from the '.bs.js' file.
