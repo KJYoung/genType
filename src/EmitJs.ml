@@ -204,33 +204,33 @@ let rec emitCodeItem ~config ~emitters ~moduleItemsEmitter ~env ~fileName
     let converter = type_ |> typeGetConverter in
     let valueNameTypeChecked = valueName ^ "TypeChecked" in
     (* TypeChecked!! *)
-    let _ = (match config.language with
+    let typeComment = (match config.language with
     | TypeScript -> begin 
       let open Filename in
       let targetTSFile = (outputFileRelative |> dirname) ^ "/" ^ (ImportPath.importPathToStr importPath) ^ ".ts" in
       let commandss = ("node tsparser.js ../../" ^ (targetTSFile) ^ " " ^ valueName ) in
-      (* let _ = print_endline ("[INFO EMITJS] " ^ (targetTSFile)) in *)
-      (* let _ = print_endline ("COMMAND : " ^ commandss) in *)
-      (* print_string ("Typescript : Compare " ^ valueName ^ "'s type in typescript(if any) with " ^ valueNameTypeChecked ^ "[" ^ (type_ |> EmitType.typeToString ~config ~typeNameIsInterface) ^ "]" ) *)
-      let _ = print_string ( "//" ^ valueName ^ "'s type in typescript : [") in
+      let typeCommentHeader = ( "// " ^ valueName ^ " | TS: [") in
       let _ = Sys.command commandss in
-      let ic = open_in (valueName ^ ".temp.txt") in
-      let _ = try
-          let line = input_line ic in
-          (* read line, discard \n *)
-          print_string (line);
-          close_in ic
-        with e ->
-          (* some unexpected exception occurs *)
-          close_in_noerr ic;
-          (* emergency closing *)
-          raise e in
-      (* let open TsParser in *)
-      (* let _ = () in *)
-      let _ = print_endline ("]" ^ " and your rescript has type [" ^ (type_ |> EmitType.typeToString ~config ~typeNameIsInterface) ^ "]")  in
-        ()
+      let typeTS = begin
+        try 
+            let ic = open_in (valueName ^ ".temp.txt") in
+            let line = input_line ic in
+              (* read line, discard \n *)
+              close_in ic;
+              line 
+          with e ->
+            (* some unexpected exception occurs *)
+            ""
+      end in
+      let typeRes = (type_ |> EmitType.typeToString ~config ~typeNameIsInterface) in
+      let typeComment = typeCommentHeader ^ typeTS ^ ("]" ^ " | RES: [" ^ typeRes ^ "]")  in
+        (typeComment)
     end
-    | _ -> print_endline "Don't care") in
+    | _ -> "") in
+    let _ = 
+      (* typeTS, typeRes comparison *)
+     ()
+    in
     (* let _ = print_endline ("IMPORT PATH : " ^ importFile) in (* MyMath *) *)
     (* let _ = print_endline ("IMPORT PATH : " ^ importFileVariable) in (* $$MyMath *) *)
     (* let _ = print_endline ("IMPORT PATH : " ^ importedAsName) in roundNotChecked *)
@@ -243,7 +243,7 @@ let rec emitCodeItem ~config ~emitters ~moduleItemsEmitter ~env ~fileName
              ^ (fileName |> ModuleName.toString)
              ^ ".re'" ^ " and '"
              ^ (importPath |> ImportPath.emit ~config)
-             ^ "'.")
+             ^ "'." ^ "\n" ^ typeComment)
            ~emitters ~name:valueNameTypeChecked ~type_ ~typeNameIsInterface
     in
     let valueNameNotDefault =

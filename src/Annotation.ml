@@ -119,7 +119,7 @@ let getBsAsInt attributes =
   | _ -> None
 
 let getAttributeImportRenaming attributes =
-  print_endline (Typedtree.attributes_toStr attributes);
+  (* print_endline (Typedtree.attributes_toStr attributes); *)
   let attributeImport = attributes |> getAttributePayload tagIsGenTypeImport in
   let genTypeAsRenaming = attributes |> getGenTypeAsRenaming in
   match (attributeImport, genTypeAsRenaming) with

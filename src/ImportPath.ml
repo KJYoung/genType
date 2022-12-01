@@ -24,7 +24,7 @@ let dump (dir, s) = NodeFilename.concat dir s
 
 let toCmt ~config ~outputFileRelative (dir, s) =
   let open Filename in
-  let _ = print_endline ("[INFO] " ^ outputFileRelative  ^ " AND " ^ (outputFileRelative |> dirname)) in
+  (* let _ = print_endline ("[INFO] " ^ outputFileRelative  ^ " AND " ^ (outputFileRelative |> dirname)) in *)
   concat
     (outputFileRelative |> dirname)
     (((dir, s |> chopExtensionSafe) |> dump)

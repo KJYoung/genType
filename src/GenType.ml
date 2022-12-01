@@ -58,7 +58,7 @@ let cli () =
         (cmt, mlast)
         | _ -> assert false
       in
-      let _ = print_endline ("[INFO] executeCliCommand : ADD [" ^ cmt ^ " ]\n Target : [" ^ mlast ^ "]") in 
+      (* let _ = print_endline ("[INFO] executeCliCommand : ADD [" ^ cmt ^ " ]\n Target : [" ^ mlast ^ "]") in  *)
       let config =
         Paths.readConfig ~bsVersion ~namespace:(cmt |> Paths.findNameSpace)
       in
@@ -143,7 +143,11 @@ let tsparser =
                 }
             });
             if(found === false){
-                console.log(`Not Found ${val}`);
+              fs.writeFile(`${val}.temp.txt`, \"Default or NotFound\", (err) => {
+                        // In case of a error throw err.
+                        if (err) throw err;
+                })
+              // console.log(`Not Found ${val}`);
             }
         }
     });
