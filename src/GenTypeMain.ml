@@ -98,8 +98,10 @@ let processCmtFile ~signFile ~config cmt =
   let cmtFile = cmt |> Paths.getCmtFile in
   if cmtFile <> "" then
     let outputFile = cmt |> Paths.getOutputFile ~config in
+    let _ = print_endline ("[INFO] processCmtFile : outputFile - " ^ outputFile) in
     let outputFileRelative = cmt |> Paths.getOutputFileRelative ~config in
     let fileName = cmt |> Paths.getModuleName in
+    (* let _ = print_endline ("[INFO] processCmtFile : fileName - " ^ fileName) in *)
     let isInterface = Filename.check_suffix cmtFile ".cmti" in
     let resolver =
       ModuleResolver.createLazyResolver ~config
@@ -107,6 +109,7 @@ let processCmtFile ~signFile ~config cmt =
         ~excludeFile:(fun fname ->
           fname = "React.re" || fname = "ReasonReact.re")
     in
+    (* Preparation End *)
     let inputCMT, hasGenTypeAnnotations =
       let inputCMT = readCmt cmtFile in
       let ignoreInterface = ref false in
@@ -149,19 +152,24 @@ let processCmtFile ~signFile ~config cmt =
       else (inputCMT, hasGenTypeAnnotations)
     in
     if hasGenTypeAnnotations then
+      let _ = print_endline ("[INFO] processCmtFile : hasGenTypeAnnotations True") in
+      (* Focus this lines of code! *)
       let sourceFile =
         match inputCMT.cmt_annots |> FindSourceFile.cmt with
         | Some sourceFile -> sourceFile
         | None -> (
           (fileName |> ModuleName.toString)
           ^ match isInterface with true -> ".resi" | false -> ".res")
-      in
-      inputCMT
-      |> translateCMT ~config ~outputFileRelative ~resolver
-      |> emitTranslation ~config ~fileName ~outputFile ~outputFileRelative
-           ~resolver ~signFile ~sourceFile
+        in
+        inputCMT
+        |> translateCMT ~config ~outputFileRelative ~resolver
+        |> emitTranslation ~config ~fileName ~outputFile ~outputFileRelative ~resolver ~signFile ~sourceFile
+      (* Focus End *)
     else if inputCMT |> cmtHasTypeErrors then
+      let _ = print_endline ("[INFO] processCmtFile : hasGenTypeAnnotations False, cmtHasTypeErrors") in
       outputFile |> GeneratedFiles.logFileAction TypeError
     else (
+      let _ = print_endline ("[INFO] processCmtFile : hasGenTypeAnnotations False, NoError") in
+      (* If there is not GenTypeAnnotation, remove file.  *)
       outputFile |> GeneratedFiles.logFileAction NoMatch;
       if Sys.file_exists outputFile then Unix.unlink outputFile)

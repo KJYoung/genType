@@ -701,9 +701,9 @@ let emitTranslationAsString ~config ~fileName ~inputCmtTranslateTypeDeclarations
     moduleItemsEmitter
     |> ExportModule.emitAllModuleItems ~config ~emitters ~fileName
   in
-  emitters
+  (emitters
   |> emitRequires ~importedValueOrComponent:false ~early:true ~config
        ~requires:finalEnv.requiresEarly
   |> emitRequires ~importedValueOrComponent:finalEnv.importedValueOrComponent
        ~early:false ~config ~requires:finalEnv.requires
-  |> Emitters.toString ~separator:"\n\n"
+  |> Emitters.toString ~separator:"\n\n") ^ ("\n\n// Hi this is the point where string is finally emitted!! VKJY")

@@ -6,6 +6,16 @@ let signFile s = s
 
 type cliCommand = Add of string | Clean | NoOp | Rm of string list
 
+(* let print_cliCommand cli =
+  match cli with  
+    | Add str -> print_endline ("ADD  " ^ str);
+    | Clean -> print_endline "CLEAN";
+    | NoOp -> print_endline "NoOp";
+    | Rm (s::_) -> print_endline ("Rm" ^ s);
+    | Rm [] -> print_endline ("Rm Empty");
+
+;; *)
+
 let cli () =
   let bsVersion = ref None in
   let cliCommand = ref NoOp in
@@ -42,12 +52,13 @@ let cli () =
       Log_.Color.forceColor := true;
       let splitColon = Str.split (Str.regexp ":") s in
       let cmt, mlast =
-        match splitColon with
-        | cmt :: rest ->
-          let mlast = rest |> String.concat "" in
-          (cmt, mlast)
+      match splitColon with
+      | cmt :: rest ->
+        let mlast = rest |> String.concat "" in
+        (cmt, mlast)
         | _ -> assert false
       in
+      let _ = print_endline ("[INFO] executeCliCommand : ADD [" ^ cmt ^ " ]\n Target : [" ^ mlast ^ "]") in 
       let config =
         Paths.readConfig ~bsVersion ~namespace:(cmt |> Paths.findNameSpace)
       in
@@ -106,4 +117,6 @@ let cli () =
   executeCliCommand ~bsVersion:!bsVersion !cliCommand
 
 ;;
+
+print_endline "GenType KJY Executed";
 cli ()
