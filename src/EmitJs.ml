@@ -204,11 +204,22 @@ let rec emitCodeItem ~config ~emitters ~moduleItemsEmitter ~env ~fileName
     let converter = type_ |> typeGetConverter in
     let valueNameTypeChecked = valueName ^ "TypeChecked" in
     (* TypeChecked!! *)
-    let _ = print_endline (match config.language with
+    let _ = (match config.language with
     | TypeScript -> begin 
-      ("Typescript : Compare " ^ valueName ^ "'s type in typescript(if any) with " ^ valueNameTypeChecked ^ "[" ^ (type_ |> EmitType.typeToString ~config ~typeNameIsInterface) ^ "]" )
+      let open Filename in
+      let targetTSFile = (outputFileRelative |> dirname) ^ "/" ^ (ImportPath.importPathToStr importPath) ^ ".ts" in
+      let commandss = ("node tsparser.js ../../" ^ (targetTSFile) ^ " " ^ valueName ) in
+      (* let _ = print_endline ("[INFO EMITJS] " ^ (targetTSFile)) in *)
+      (* let _ = print_endline ("COMMAND : " ^ commandss) in *)
+      (* print_string ("Typescript : Compare " ^ valueName ^ "'s type in typescript(if any) with " ^ valueNameTypeChecked ^ "[" ^ (type_ |> EmitType.typeToString ~config ~typeNameIsInterface) ^ "]" ) *)
+      let _ = print_string ( "//" ^ valueName ^ "'s type in typescript : [") in
+      let _ = Sys.command commandss in
+      let open TsParser in
+      let _ = () in
+      let _ = print_endline ("]" ^ "and your rescript has type [" ^ (type_ |> EmitType.typeToString ~config ~typeNameIsInterface) ^ "]")  in
+        ()
     end
-    | _ -> "Don't care") in
+    | _ -> print_endline "Don't care") in
     (* let _ = print_endline ("IMPORT PATH : " ^ importFile) in (* MyMath *) *)
     (* let _ = print_endline ("IMPORT PATH : " ^ importFileVariable) in (* $$MyMath *) *)
     (* let _ = print_endline ("IMPORT PATH : " ^ importedAsName) in roundNotChecked *)

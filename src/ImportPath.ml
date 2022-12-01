@@ -24,6 +24,7 @@ let dump (dir, s) = NodeFilename.concat dir s
 
 let toCmt ~config ~outputFileRelative (dir, s) =
   let open Filename in
+  let _ = print_endline ("[INFO] " ^ outputFileRelative  ^ " AND " ^ (outputFileRelative |> dirname)) in
   concat
     (outputFileRelative |> dirname)
     (((dir, s |> chopExtensionSafe) |> dump)
@@ -32,3 +33,9 @@ let toCmt ~config ~outputFileRelative (dir, s) =
 
 let emit ~config (dir, s) =
   match config.importPath with Relative -> (dir, s) |> dump | Node -> s
+
+let importPathToStr  (importPath : t) : string = (
+  match importPath with
+  (* | (strA, strB) -> strA ^ " | " ^ strB *)
+  | (strA, strB) -> strB
+)

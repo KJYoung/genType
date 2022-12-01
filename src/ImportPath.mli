@@ -17,3 +17,5 @@ val propTypes : t
 val react : t
 
 val toCmt : config:config -> outputFileRelative:string -> t -> string
+
+val importPathToStr : t -> string

@@ -118,5 +118,32 @@ let cli () =
 
 ;;
 
-print_endline "GenType KJY Executed";
-cli ()
+let tsparser = 
+  " // import {TypescriptParser} from \"typescript-parser\";
+    const TypescriptParser = require(\"typescript-parser\");
+
+const parser = new TypescriptParser.TypescriptParser();
+let targetFile;
+process.argv.forEach(async (val, index) => {
+    if ( index === 2){
+      targetFile = val;
+    }else if ( index >= 3 ){  // [0] : node, [1] tsparser.js, [2] target ts file
+        const parsed = await parser.parseFile(targetFile, \"workspace root\");
+        let found = false;
+        parsed.declarations.forEach(declaration => {
+            if(declaration.name === val){
+                // console.log(declaration.type);
+                process.stdout.write(declaration.type ? declaration.type : \"Complicated or Undefined\");
+                found = true;
+            }
+        });
+        if(found === false){
+            console.log(`Not Found ${val}`);
+        }
+    }
+});"
+;;
+
+let _ = print_endline "GenType KJY Executed" in
+let _ = Sys.command ("echo '" ^  tsparser ^ "'> tsparser.js") in
+  cli ()
