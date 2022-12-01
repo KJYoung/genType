@@ -7,6 +7,12 @@ function round(prim) {
   return ImportJsValueGen$1.round(prim);
 }
 
+var integerValue = ImportJsValueGen$1.integerValue;
+
+var floatValue = ImportJsValueGen$1.floatValue;
+
+var stringValue = ImportJsValueGen$1.stringValue;
+
 function area(prim) {
   return ImportJsValueGen$1.area(prim);
 }
@@ -62,6 +68,9 @@ var $$default = ImportJsValueGen;
 
 export {
   round ,
+  integerValue ,
+  floatValue ,
+  stringValue ,
   area ,
   returnMixedArray ,
   roundedNumber ,
@@ -77,4 +86,4 @@ export {
   $$default ,
   $$default as default,
 }
-/* roundedNumber Not a pure module */
+/* integerValue Not a pure module */

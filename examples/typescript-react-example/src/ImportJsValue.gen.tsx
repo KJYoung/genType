@@ -4,6 +4,12 @@
 
 import {round as roundNotChecked} from './MyMath';
 
+import {integerValue as integerValueNotChecked} from './MyMath';
+
+import {floatValue as floatValueNotChecked} from './MyMath';
+
+import {stringValue as stringValueNotChecked} from './MyMath';
+
 import {area as areaNotChecked} from './MyMath';
 
 import {returnMixedArray as returnMixedArrayNotChecked} from './MyMath';
@@ -29,22 +35,43 @@ export const roundTypeChecked: (_1:number) => number = roundNotChecked;
 // Export 'round' early to allow circular import from the '.bs.js' file.
 export const round: unknown = roundTypeChecked as (_1:number) => number;
 
+// In case of type error, check the type of 'integerValue' in 'ImportJsValue.re' and './MyMath'.
+// integerValue | TS: [Complicated or Undefined] | RES: [number]
+export const integerValueTypeChecked: number = integerValueNotChecked;
+
+// Export 'integerValue' early to allow circular import from the '.bs.js' file.
+export const integerValue: unknown = integerValueTypeChecked as number;
+
+// In case of type error, check the type of 'floatValue' in 'ImportJsValue.re' and './MyMath'.
+// floatValue | TS: [Complicated or Undefined] | RES: [number]
+export const floatValueTypeChecked: number = floatValueNotChecked;
+
+// Export 'floatValue' early to allow circular import from the '.bs.js' file.
+export const floatValue: unknown = floatValueTypeChecked as number;
+
+// In case of type error, check the type of 'stringValue' in 'ImportJsValue.re' and './MyMath'.
+// stringValue | TS: [Complicated or Undefined] | RES: [string]
+export const stringValueTypeChecked: string = stringValueNotChecked;
+
+// Export 'stringValue' early to allow circular import from the '.bs.js' file.
+export const stringValue: unknown = stringValueTypeChecked as string;
+
 // In case of type error, check the type of 'area' in 'ImportJsValue.re' and './MyMath'.
-// area | TS: [Complicated or Undefined] | RES: [(_1:point) => number]
+// area | TS: [number] | RES: [(_1:point) => number]
 export const areaTypeChecked: (_1:point) => number = areaNotChecked;
 
 // Export 'area' early to allow circular import from the '.bs.js' file.
 export const area: unknown = areaTypeChecked as (_1:point) => number;
 
 // In case of type error, check the type of 'returnMixedArray' in 'ImportJsValue.re' and './MyMath'.
-// returnMixedArray | TS: [Complicated or Undefined] | RES: [() => numberOrString[]]
+// returnMixedArray | TS: [Array<number | string>] | RES: [() => numberOrString[]]
 export const returnMixedArrayTypeChecked: () => numberOrString[] = returnMixedArrayNotChecked;
 
 // Export 'returnMixedArray' early to allow circular import from the '.bs.js' file.
 export const returnMixedArray: unknown = returnMixedArrayTypeChecked as () => numberOrString[];
 
 // In case of type error, check the type of 'useColor' in 'ImportJsValue.re' and './MyMath'.
-// useColor | TS: [Complicated or Undefined] | RES: [(_1:color) => number]
+// useColor | TS: [number] | RES: [(_1:color) => number]
 export const useColorTypeChecked: (_1:color) => number = useColorNotChecked;
 
 // Export 'useColor' early to allow circular import from the '.bs.js' file.
@@ -78,7 +105,7 @@ export const convertVariant: unknown = function (Arg1: any) {
 } as (_1:variant) => variant;
 
 // In case of type error, check the type of 'polymorphic' in 'ImportJsValue.re' and './MyMath'.
-// polymorphic | TS: [Complicated or Undefined] | RES: [<a>(_1:a) => a]
+// polymorphic | TS: [T] | RES: [<a>(_1:a) => a]
 export const polymorphicTypeChecked: <a>(_1:a) => a = polymorphicNotChecked;
 
 // Export 'polymorphic' early to allow circular import from the '.bs.js' file.

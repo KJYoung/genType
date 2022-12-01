@@ -3,6 +3,12 @@
   ")
 @genType.import("./MyMath")
 external round: float => float = "round"
+@genType.import("./MyMath")
+external integerValue: int = "integerValue"
+@genType.import("./MyMath")
+external floatValue: float = "floatValue"
+@genType.import("./MyMath")
+external stringValue: string = "stringValue"
 // external round: float => string = "round"
 
 @genType
