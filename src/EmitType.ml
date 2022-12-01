@@ -352,8 +352,14 @@ let typeToString ~config ~typeNameIsInterface type_ =
 
 let ofType ~config ?(typeNameIsInterface = fun _ -> false) ~type_ s =
   match config.language = Untyped with
-  | true -> s
-  | false -> s ^ ": " ^ (type_ |> typeToString ~config ~typeNameIsInterface)
+  | true -> begin
+    (* print_endline ("[ofType TRUE] " ^ s); *)
+    s
+  end
+  | false -> begin
+    (* print_endline ("[ofType FALSE] " ^ s ^ ": " ^ (type_ |> typeToString ~config ~typeNameIsInterface)); *)
+    s ^ ": " ^ (type_ |> typeToString ~config ~typeNameIsInterface)
+  end
 
 let emitExportConst_ ~early ?(comment = "") ~config ?(docString = "") ~emitters
     ~name ~type_ ~typeNameIsInterface line =
@@ -364,6 +370,7 @@ let emitExportConst_ ~early ?(comment = "") ~config ?(docString = "") ~emitters
   | _, TypeScript | ES6, _ ->
     "export const "
     ^ (name |> ofType ~config ~typeNameIsInterface ~type_)
+    (* HERE IS THE POINT! VKJY *)
     ^ " = " ^ line
   | CommonJS, _ ->
     "const "

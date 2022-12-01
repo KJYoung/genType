@@ -203,6 +203,15 @@ let rec emitCodeItem ~config ~emitters ~moduleItemsEmitter ~env ~fileName
     in
     let converter = type_ |> typeGetConverter in
     let valueNameTypeChecked = valueName ^ "TypeChecked" in
+    (* TypeChecked!! *)
+    let _ = print_endline (match config.language with
+    | TypeScript -> begin 
+      ("Typescript : Compare " ^ valueName ^ "'s type in typescript(if any) with " ^ valueNameTypeChecked ^ "[" ^ (type_ |> EmitType.typeToString ~config ~typeNameIsInterface) ^ "]" )
+    end
+    | _ -> "Don't care") in
+    (* let _ = print_endline ("IMPORT PATH : " ^ importFile) in (* MyMath *) *)
+    (* let _ = print_endline ("IMPORT PATH : " ^ importFileVariable) in (* $$MyMath *) *)
+    (* let _ = print_endline ("IMPORT PATH : " ^ importedAsName) in roundNotChecked *)
     let emitters =
       (importedAsName ^ restOfPath) ^ ";"
       |> EmitType.emitExportConstEarly ~config

@@ -33,7 +33,10 @@ let rec expression_desc_toStr (exprDescr : Parsetree.expression_desc) : string =
     match cons with
       | Pconst_integer (str, _) -> "int(" ^ str  ^ ")" 
       | Pconst_char cha -> "char(" ^ (String.make 1 cha) ^ ")"
-      | Pconst_string (str, _) -> "str(" ^ str ^ ")"
+      | Pconst_string (str, _) -> begin 
+        
+        "str(" ^ str ^ ")"
+      end
       | Pconst_float (str, _) -> "float(" ^ str ^ ")"
   ) in
   match exprDescr with
