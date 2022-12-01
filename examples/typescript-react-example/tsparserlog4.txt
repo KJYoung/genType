@@ -1,0 +1,7 @@
+CASE 202
+(_1: number, _2: number) => number => unknown
+CASE 202
+any => unknown
+CASE 202
+T => unknown
+declaration type : (_1: number, _2: number) => number => unknown

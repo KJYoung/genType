@@ -1,4 +1,3 @@
- // import {TypescriptParser} from "typescript-parser";
  const TypescriptParser = require("typescript-parser");
  const fs = require("fs");
 
