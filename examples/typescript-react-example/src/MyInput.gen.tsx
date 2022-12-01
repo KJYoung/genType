@@ -5,6 +5,7 @@
 import {default as defaultNotChecked} from './MyInput';
 
 // In case of type error, check the type of 'default' in 'MyInput.re' and './MyInput'.
+/* default | TS: [Default or NotFound] | RES: [React.ComponentType<{ readonly onFocus?: (_1:inputFocusEvent) => void }>] */
 export const defaultTypeChecked: React.ComponentType<{ readonly onFocus?: (_1:inputFocusEvent) => void }> = defaultNotChecked;
 
 // Export '$$default' early to allow circular import from the '.bs.js' file.

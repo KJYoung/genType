@@ -127,8 +127,17 @@ let tsparser =
     let targetFile;
     process.argv.forEach(async (val, index) => {
         if ( index === 2 ){
-          targetFile = val;
-        }else if ( index >= 3 ){  // [0] : node, [1] tsparser.js, [2] target ts file
+          let tsFile = `${val}.ts`;
+          let tsxFile = `${val}.tsx`;
+          if(fs.existsSync(tsFile)){
+            targetFile = tsFile;
+          }else if(fs.existsSync(tsxFile)){
+            targetFile = tsxFile;
+          }else{
+            console.log(val);
+            targetFile = -1;
+          }
+        }else if ( index >= 3 && targetFile !== -1 ){  // [0] : node, [1] tsparser.js, [2] target ts file
             const parsed = await parser.parseFile(targetFile, \"workspace root\");
             let found = false;
             parsed.declarations.forEach(declaration => {

@@ -29,56 +29,56 @@ import * as Curry__Es6Import from 'rescript/lib/es6/curry.js';
 const Curry: any = Curry__Es6Import;
 
 // In case of type error, check the type of 'round' in 'ImportJsValue.re' and './MyMath'.
-// round | TS: [(_: number) => number] | RES: [(_1:number) => number]
+/* round | TS: [(_: number) => number] | RES: [(_1:number) => number] */
 export const roundTypeChecked: (_1:number) => number = roundNotChecked;
 
 // Export 'round' early to allow circular import from the '.bs.js' file.
 export const round: unknown = roundTypeChecked as (_1:number) => number;
 
 // In case of type error, check the type of 'integerValue' in 'ImportJsValue.re' and './MyMath'.
-// integerValue | TS: [number] | RES: [number]
+/* integerValue | TS: [number] | RES: [number] */
 export const integerValueTypeChecked: number = integerValueNotChecked;
 
 // Export 'integerValue' early to allow circular import from the '.bs.js' file.
 export const integerValue: unknown = integerValueTypeChecked as number;
 
 // In case of type error, check the type of 'floatValue' in 'ImportJsValue.re' and './MyMath'.
-// floatValue | TS: [number] | RES: [number]
+/* floatValue | TS: [number] | RES: [number] */
 export const floatValueTypeChecked: number = floatValueNotChecked;
 
 // Export 'floatValue' early to allow circular import from the '.bs.js' file.
 export const floatValue: unknown = floatValueTypeChecked as number;
 
 // In case of type error, check the type of 'stringValue' in 'ImportJsValue.re' and './MyMath'.
-// stringValue | TS: [string] | RES: [string]
+/* stringValue | TS: [string] | RES: [string] */
 export const stringValueTypeChecked: string = stringValueNotChecked;
 
 // Export 'stringValue' early to allow circular import from the '.bs.js' file.
 export const stringValue: unknown = stringValueTypeChecked as string;
 
 // In case of type error, check the type of 'area' in 'ImportJsValue.re' and './MyMath'.
-// area | TS: [number] | RES: [(_1:point) => number]
+/* area | TS: [number] | RES: [(_1:point) => number] */
 export const areaTypeChecked: (_1:point) => number = areaNotChecked;
 
 // Export 'area' early to allow circular import from the '.bs.js' file.
 export const area: unknown = areaTypeChecked as (_1:point) => number;
 
 // In case of type error, check the type of 'returnMixedArray' in 'ImportJsValue.re' and './MyMath'.
-// returnMixedArray | TS: [Array<number | string>] | RES: [() => numberOrString[]]
+/* returnMixedArray | TS: [Array<number | string>] | RES: [() => numberOrString[]] */
 export const returnMixedArrayTypeChecked: () => numberOrString[] = returnMixedArrayNotChecked;
 
 // Export 'returnMixedArray' early to allow circular import from the '.bs.js' file.
 export const returnMixedArray: unknown = returnMixedArrayTypeChecked as () => numberOrString[];
 
 // In case of type error, check the type of 'useColor' in 'ImportJsValue.re' and './MyMath'.
-// useColor | TS: [number] | RES: [(_1:color) => number]
+/* useColor | TS: [number] | RES: [(_1:color) => number] */
 export const useColorTypeChecked: (_1:color) => number = useColorNotChecked;
 
 // Export 'useColor' early to allow circular import from the '.bs.js' file.
 export const useColor: unknown = useColorTypeChecked as (_1:color) => number;
 
 // In case of type error, check the type of 'higherOrder' in 'ImportJsValue.re' and './MyMath'.
-// higherOrder | TS: [Complicated or Undefined] | RES: [(_1:((_1:number, _2:number) => number)) => number]
+/* higherOrder | TS: [(_1: number, _2: number) => number => unknown] | RES: [(_1:((_1:number, _2:number) => number)) => number] */
 export const higherOrderTypeChecked: (_1:((_1:number, _2:number) => number)) => number = higherOrderNotChecked;
 
 // Export 'higherOrder' early to allow circular import from the '.bs.js' file.
@@ -91,7 +91,7 @@ export const higherOrder: unknown = function (Arg1: any) {
 } as (_1:((_1:number, _2:number) => number)) => number;
 
 // In case of type error, check the type of 'convertVariant' in 'ImportJsValue.re' and './MyMath'.
-// convertVariant | TS: [Complicated or Undefined] | RES: [(_1:variant) => variant]
+/* convertVariant | TS: [any => unknown] | RES: [(_1:variant) => variant] */
 export const convertVariantTypeChecked: (_1:variant) => variant = convertVariantNotChecked;
 
 // Export 'convertVariant' early to allow circular import from the '.bs.js' file.
@@ -105,14 +105,14 @@ export const convertVariant: unknown = function (Arg1: any) {
 } as (_1:variant) => variant;
 
 // In case of type error, check the type of 'polymorphic' in 'ImportJsValue.re' and './MyMath'.
-// polymorphic | TS: [T] | RES: [<a>(_1:a) => a]
+/* polymorphic | TS: [T => unknown] | RES: [<a>(_1:a) => a] */
 export const polymorphicTypeChecked: <a>(_1:a) => a = polymorphicNotChecked;
 
 // Export 'polymorphic' early to allow circular import from the '.bs.js' file.
 export const polymorphic: unknown = polymorphicTypeChecked as <a>(_1:a) => a;
 
 // In case of type error, check the type of 'default' in 'ImportJsValue.re' and './MyMath'.
-// default | TS: [Default or NotFound] | RES: [number]
+/* default | TS: [Default or NotFound] | RES: [number] */
 export const defaultTypeChecked: number = defaultNotChecked;
 
 // Export '$$default' early to allow circular import from the '.bs.js' file.

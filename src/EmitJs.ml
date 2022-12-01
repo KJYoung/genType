@@ -207,9 +207,9 @@ let rec emitCodeItem ~config ~emitters ~moduleItemsEmitter ~env ~fileName
     let typeComment = (match config.language with
     | TypeScript -> begin 
       let open Filename in
-      let targetTSFile = (outputFileRelative |> dirname) ^ "/" ^ (ImportPath.importPathToStr importPath) ^ ".ts" in
+      let targetTSFile = (outputFileRelative |> dirname) ^ "/" ^ (ImportPath.importPathToStr importPath) in (* without extension! *)
       let commandss = ("node tsparser.js ../../" ^ (targetTSFile) ^ " " ^ valueName ) in
-      let typeCommentHeader = ( "// " ^ valueName ^ " | TS: [") in
+      let typeCommentHeader = ( "/* " ^ valueName ^ " | TS: [") in
       let _ = Sys.command commandss in
       let typeTS = begin
         try 
@@ -223,7 +223,7 @@ let rec emitCodeItem ~config ~emitters ~moduleItemsEmitter ~env ~fileName
             ""
       end in
       let typeRes = (type_ |> EmitType.typeToString ~config ~typeNameIsInterface) in
-      let typeComment = typeCommentHeader ^ typeTS ^ ("]" ^ " | RES: [" ^ typeRes ^ "]")  in
+      let typeComment = typeCommentHeader ^ typeTS ^ ("]" ^ " | RES: [" ^ typeRes ^ "] */")  in
         (typeComment)
     end
     | _ -> "") in
