@@ -14,6 +14,7 @@ node_modules/
 /_release
 /genType.install
 /yarn-error.log
+typescript_type.ts
 
 # npm publish related stuff
 gentype-*.tgz
