@@ -214,9 +214,20 @@ let rec emitCodeItem ~config ~emitters ~moduleItemsEmitter ~env ~fileName
       (* print_string ("Typescript : Compare " ^ valueName ^ "'s type in typescript(if any) with " ^ valueNameTypeChecked ^ "[" ^ (type_ |> EmitType.typeToString ~config ~typeNameIsInterface) ^ "]" ) *)
       let _ = print_string ( "//" ^ valueName ^ "'s type in typescript : [") in
       let _ = Sys.command commandss in
+      let ic = open_in (valueName ^ ".temp.txt") in
+      let _ = try
+          let line = input_line ic in
+          (* read line, discard \n *)
+          print_string (line);
+          close_in ic
+        with e ->
+          (* some unexpected exception occurs *)
+          close_in_noerr ic;
+          (* emergency closing *)
+          raise e in
       (* let open TsParser in *)
       (* let _ = () in *)
-      let _ = print_endline ("]" ^ "and your rescript has type [" ^ (type_ |> EmitType.typeToString ~config ~typeNameIsInterface) ^ "]")  in
+      let _ = print_endline ("]" ^ " and your rescript has type [" ^ (type_ |> EmitType.typeToString ~config ~typeNameIsInterface) ^ "]")  in
         ()
     end
     | _ -> print_endline "Don't care") in
