@@ -214,8 +214,8 @@ let rec emitCodeItem ~config ~emitters ~moduleItemsEmitter ~env ~fileName
       (* print_string ("Typescript : Compare " ^ valueName ^ "'s type in typescript(if any) with " ^ valueNameTypeChecked ^ "[" ^ (type_ |> EmitType.typeToString ~config ~typeNameIsInterface) ^ "]" ) *)
       let _ = print_string ( "//" ^ valueName ^ "'s type in typescript : [") in
       let _ = Sys.command commandss in
-      let open TsParser in
-      let _ = () in
+      (* let open TsParser in *)
+      (* let _ = () in *)
       let _ = print_endline ("]" ^ "and your rescript has type [" ^ (type_ |> EmitType.typeToString ~config ~typeNameIsInterface) ^ "]")  in
         ()
     end
