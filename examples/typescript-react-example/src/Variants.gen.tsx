@@ -142,3 +142,5 @@ export const restResult3: (x:result3<number,string>) => result3<number,string> =
     ? {tag:"Ok", value:result._0}
     : {tag:"Error", value:result._0}
 };
+
+// Hi this is the point where string is finally emitted!! VKJY

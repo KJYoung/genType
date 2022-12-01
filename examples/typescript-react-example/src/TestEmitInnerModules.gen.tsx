@@ -15,3 +15,5 @@ export const Outer_Medium_Inner_y: number = TestEmitInnerModulesBS.Outer.Medium.
 export const Inner: { x: number; y: string } = TestEmitInnerModulesBS.Inner
 
 export const Outer: { Medium: { Inner: { y: number } } } = TestEmitInnerModulesBS.Outer
+
+// Hi this is the point where string is finally emitted!! VKJY

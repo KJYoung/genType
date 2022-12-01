@@ -40,3 +40,5 @@ import type {renderMe as ImportHooks_renderMe} from './ImportHooks.gen';
 export type person = { readonly name: string; readonly age: number };
 
 export default $$default;
+
+// Hi this is the point where string is finally emitted!! VKJY

@@ -42,3 +42,5 @@ export const testInner1Expanded: (x:ModuleAliases2_InnerAlias_inner) => ModuleAl
 export const testInner2: (x:inner2) => inner2 = TestModuleAliasesBS.testInner2;
 
 export const testInner2Expanded: (x:ModuleAliases2_Outer_Inner_inner) => ModuleAliases2_Outer_Inner_inner = TestModuleAliasesBS.testInner2Expanded;
+
+// Hi this is the point where string is finally emitted!! VKJY

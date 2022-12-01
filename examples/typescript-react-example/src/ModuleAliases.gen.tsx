@@ -32,3 +32,5 @@ export const testNested: (x:InnerNestedAlias_t) => InnerNestedAlias_t = ModuleAl
 export const testInner: (x:Outer2Alias_OuterInnerAlias_innerT) => Outer2Alias_OuterInnerAlias_innerT = ModuleAliasesBS.testInner;
 
 export const testInner2: (x:Outer2Alias_Inner2_OuterInnerAlias2_innerT) => Outer2Alias_Inner2_OuterInnerAlias2_innerT = ModuleAliasesBS.testInner2;
+
+// Hi this is the point where string is finally emitted!! VKJY

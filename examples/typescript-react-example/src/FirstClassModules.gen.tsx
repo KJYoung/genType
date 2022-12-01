@@ -68,3 +68,5 @@ export const someFunctorAsFunction: (x:{
   readonly Z: unknown; 
   readonly y: string
 }) => { readonly ww: string } = FirstClassModulesBS.someFunctorAsFunction;
+
+// Hi this is the point where string is finally emitted!! VKJY

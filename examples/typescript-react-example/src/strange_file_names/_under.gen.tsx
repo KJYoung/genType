@@ -7,3 +7,5 @@ import * as _underBS__Es6Import from './_under.bs';
 const _underBS: any = _underBS__Es6Import;
 
 export const x: number = _underBS.x;
+
+// Hi this is the point where string is finally emitted!! VKJY

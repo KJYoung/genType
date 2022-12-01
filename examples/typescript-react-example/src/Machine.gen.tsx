@@ -10,3 +10,5 @@ const MachineBS: any = MachineBS__Es6Import;
 export type aa = { tag: "A"; value: number };
 
 export const a: aa = {tag:"A", value:MachineBS.a._0};
+
+// Hi this is the point where string is finally emitted!! VKJY

@@ -7,3 +7,5 @@ import * as ShadowBS__Es6Import from './Shadow.bs';
 const ShadowBS: any = ShadowBS__Es6Import;
 
 export const test: () => string = ShadowBS.test;
+
+// Hi this is the point where string is finally emitted!! VKJY

@@ -17,3 +17,5 @@ export type someMethods = {
   readonly threeargs: (_1:number, _2:string, _3:number) => string; 
   readonly twoArgs: (_1:number, _2:string) => number
 };
+
+// Hi this is the point where string is finally emitted!! VKJY

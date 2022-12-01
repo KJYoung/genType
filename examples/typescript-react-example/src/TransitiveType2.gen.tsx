@@ -9,3 +9,5 @@ export type t2 = (null | undefined | TransitiveType3_t3);
 
 // tslint:disable-next-line:interface-over-type-literal
 export type t2Alias = t2;
+
+// Hi this is the point where string is finally emitted!! VKJY

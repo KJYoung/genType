@@ -12,3 +12,5 @@ const OnClick2BS: any = OnClick2BS__Es6Import;
 export type Props = { readonly onClick: (_1:MouseEvent) => void };
 
 export const make: React.ComponentType<{ readonly onClick: (_1:MouseEvent) => void }> = OnClick2BS.make;
+
+// Hi this is the point where string is finally emitted!! VKJY

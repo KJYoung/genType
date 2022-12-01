@@ -7,3 +7,5 @@ import * as _404BS__Es6Import from './404.bs';
 const _404BS: any = _404BS__Es6Import;
 
 export const x: number = _404BS.x;
+
+// Hi this is the point where string is finally emitted!! VKJY

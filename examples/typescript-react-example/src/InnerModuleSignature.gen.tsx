@@ -12,3 +12,5 @@ export type InnerModule_t = string;
 export const InnerModule_make: (_1:InnerModule_t) => string = InnerModuleSignatureBS.InnerModule.make;
 
 export const InnerModule: { make: (_1:InnerModule_t) => string } = InnerModuleSignatureBS.InnerModule
+
+// Hi this is the point where string is finally emitted!! VKJY

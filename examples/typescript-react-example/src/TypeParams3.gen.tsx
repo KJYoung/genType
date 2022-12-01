@@ -13,3 +13,5 @@ import type {items as TypeParams2_items} from './TypeParams2.gen';
 export const test: (x:TypeParams2_items) => TypeParams2_items = TypeParams3BS.test;
 
 export const test2: (x:TypeParams2_items2) => TypeParams2_items2 = TypeParams3BS.test2;
+
+// Hi this is the point where string is finally emitted!! VKJY

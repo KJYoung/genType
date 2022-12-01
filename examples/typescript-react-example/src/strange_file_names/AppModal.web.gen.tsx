@@ -7,3 +7,5 @@ import * as AppModal_webBS__Es6Import from './AppModal.web.bs';
 const AppModal_webBS: any = AppModal_webBS__Es6Import;
 
 export const x: number = AppModal_webBS.x;
+
+// Hi this is the point where string is finally emitted!! VKJY

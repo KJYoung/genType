@@ -19,3 +19,5 @@ export const convertAlias: (x:TransitiveType2_t2Alias) => TransitiveType2_t2Alia
   const result = TransitiveType1BS.convertAlias((Arg1 == null ? undefined : Arg1));
   return result
 };
+
+// Hi this is the point where string is finally emitted!! VKJY

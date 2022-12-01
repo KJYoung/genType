@@ -21,3 +21,5 @@ export type r4 = { readonly r4: number };
 export type annotatedVariant = 
     { tag: "R2"; value: [r2, r3] }
   | { tag: "R4"; value: r4 };
+
+// Hi this is the point where string is finally emitted!! VKJY

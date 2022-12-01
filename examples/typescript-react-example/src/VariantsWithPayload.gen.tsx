@@ -105,3 +105,5 @@ export const testVariant1Object: (x:variant1Object) => variant1Object = function
   const result = VariantsWithPayloadBS.testVariant1Object({TAG: 0, _0:Arg1} as any);
   return result._0
 };
+
+// Hi this is the point where string is finally emitted!! VKJY

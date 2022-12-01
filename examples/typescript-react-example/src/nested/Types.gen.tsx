@@ -156,3 +156,5 @@ export const currentTime: Date = TypesBS.currentTime;
 export const i64Const: i64B = TypesBS.i64Const;
 
 export const optFunction: (null | undefined | (() => number)) = TypesBS.optFunction;
+
+// Hi this is the point where string is finally emitted!! VKJY

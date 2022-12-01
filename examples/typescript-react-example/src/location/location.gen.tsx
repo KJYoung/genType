@@ -4,3 +4,5 @@
 
 // tslint:disable-next-line:interface-over-type-literal
 export type t = { readonly id: string; readonly name: string };
+
+// Hi this is the point where string is finally emitted!! VKJY

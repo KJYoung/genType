@@ -154,3 +154,5 @@ export const testInline: (x:inline) => inline = function (Arg1: any) {
     ? {tag:"J", value:result}
     : {tag:"K", value:[result._0, result._1]}
 };
+
+// Hi this is the point where string is finally emitted!! VKJY

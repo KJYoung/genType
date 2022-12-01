@@ -7,3 +7,5 @@ import * as WarningsBS__Es6Import from './Warnings.bs';
 const WarningsBS: any = WarningsBS__Es6Import;
 
 export const ddd: number = WarningsBS.x;
+
+// Hi this is the point where string is finally emitted!! VKJY

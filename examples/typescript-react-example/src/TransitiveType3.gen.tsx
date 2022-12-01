@@ -10,3 +10,5 @@ const TransitiveType3BS: any = TransitiveType3BS__Es6Import;
 export type t3 = { readonly i: number; readonly s: string };
 
 export const convertT3: (x:t3) => t3 = TransitiveType3BS.convertT3;
+
+// Hi this is the point where string is finally emitted!! VKJY

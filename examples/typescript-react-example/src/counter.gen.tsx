@@ -9,3 +9,5 @@ const counterBS: any = counterBS__Es6Import;
 import type {aa as Machine_aa} from './Machine.gen';
 
 export const b: Machine_aa = {tag:"A", value:counterBS.b._0};
+
+// Hi this is the point where string is finally emitted!! VKJY

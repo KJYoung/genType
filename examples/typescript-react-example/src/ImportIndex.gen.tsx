@@ -11,3 +11,5 @@ export const defaultTypeChecked: React.ComponentType<{ readonly method?: "push" 
 export const $$default: unknown = defaultTypeChecked as React.ComponentType<{ readonly method?: "push" | "replace" }>;
 
 export default $$default;
+
+// Hi this is the point where string is finally emitted!! VKJY

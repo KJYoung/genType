@@ -19,3 +19,5 @@ export type OuterAlias_Inner_inner = Outer_Inner_inner;
 
 // tslint:disable-next-line:interface-over-type-literal
 export type InnerAlias_inner = OuterAlias_Inner_inner;
+
+// Hi this is the point where string is finally emitted!! VKJY

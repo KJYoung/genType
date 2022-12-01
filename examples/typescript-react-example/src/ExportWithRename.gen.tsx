@@ -12,3 +12,5 @@ const ExportWithRenameBS: any = ExportWithRenameBS__Es6Import;
 export type Props = { readonly s: string };
 
 export const ExportWithRename: React.ComponentType<{ readonly s: string }> = ExportWithRenameBS.make;
+
+// Hi this is the point where string is finally emitted!! VKJY

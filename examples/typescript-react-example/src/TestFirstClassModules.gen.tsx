@@ -22,3 +22,5 @@ export const convertInterface: (x:FirstClassModulesInterface_firstClassModule) =
 export const convertRecord: (x:FirstClassModulesInterface_record) => FirstClassModulesInterface_record = TestFirstClassModulesBS.convertRecord;
 
 export const convertFirstClassModuleWithTypeEquations: <T1,T2>(x:{ readonly out: ((_1:T1) => T1); readonly Inner: { readonly inn: ((_1:T2) => T2) } }) => { readonly out: (_1:T1) => T1; readonly Inner: { readonly inn: (_1:T2) => T2 } } = TestFirstClassModulesBS.convertFirstClassModuleWithTypeEquations;
+
+// Hi this is the point where string is finally emitted!! VKJY

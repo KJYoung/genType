@@ -23,3 +23,5 @@ export const X_x: number = EmitModuleIfNoConversionBS.X.x;
 export const Y_x: string = EmitModuleIfNoConversionBS.Y.x;
 
 export const Y: { x: string } = EmitModuleIfNoConversionBS.Y
+
+// Hi this is the point where string is finally emitted!! VKJY

@@ -18,3 +18,5 @@ export type pair = [opaqueFromRecords, opaqueFromRecords];
 export const noConversion: (x:opaqueFromRecords) => opaqueFromRecords = OpaqueBS.noConversion;
 
 export const testConvertNestedRecordFromOtherFile: (x:Records_business) => Records_business = OpaqueBS.testConvertNestedRecordFromOtherFile;
+
+// Hi this is the point where string is finally emitted!! VKJY

@@ -22,3 +22,5 @@ export const testWithRenaming: (x:withRenaming) => withRenaming = function (Arg1
 };
 
 export const testWithoutRenaming: (x:withoutRenaming) => withoutRenaming = MoreVariantsBS.testWithoutRenaming;
+
+// Hi this is the point where string is finally emitted!! VKJY

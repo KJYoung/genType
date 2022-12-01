@@ -12,3 +12,5 @@ export type items = TypeParams1_ocaml_array<item>;
 
 // tslint:disable-next-line:interface-over-type-literal
 export type items2 = item[];
+
+// Hi this is the point where string is finally emitted!! VKJY

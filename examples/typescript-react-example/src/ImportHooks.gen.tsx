@@ -36,3 +36,5 @@ export type person = { readonly name: string; readonly age: number };
 
 // tslint:disable-next-line:interface-over-type-literal
 export type renderMe<a> = React.ComponentType<{ readonly randomString: string; readonly poly: a }>;
+
+// Hi this is the point where string is finally emitted!! VKJY

@@ -7,3 +7,5 @@ import * as with_underscoreBS__Es6Import from './with_underscore.bs';
 const with_underscoreBS: any = with_underscoreBS__Es6Import;
 
 export const x: number = with_underscoreBS.x;
+
+// Hi this is the point where string is finally emitted!! VKJY

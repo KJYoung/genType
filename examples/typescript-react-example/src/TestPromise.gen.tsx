@@ -25,3 +25,5 @@ export const barx: (_1:{ readonly x?: Promise<(null | undefined | string)> }, _2
   const result = Curry._2(TestPromiseBS.barx, (Arg1.x == null ? undefined : Arg1.x.then(function _element($promise: any) { return ($promise == null ? undefined : $promise)})), Arg2);
   return result
 };
+
+// Hi this is the point where string is finally emitted!! VKJY
