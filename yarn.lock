@@ -2,24 +2,29 @@
 # yarn lockfile v1
 
 
-debug@^4.1.0:
-  version "4.3.4"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
-  integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
+"debug@^4.1.0":
+  "integrity" "sha512-pYAIzeRo8J6KPEaJ0VWOh5Pzkbw/RetuzehGM7QRRX5he4fPHx2rdKMB256ehJCkX+XRQm16eZLqLNS8RSZXZw=="
+  "resolved" "https://registry.npmjs.org/debug/-/debug-4.1.1.tgz"
+  "version" "4.1.1"
   dependencies:
-    ms "2.1.2"
+    "ms" "^2.1.1"
 
-ms@2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
-  integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
+"esy@^0.6.12":
+  "integrity" "sha512-EJAbVSOA+KRAK86ZY3tSZUpbh9cYaUxIITycXFJp9yuH+XAuLrCSdTJsH+wvQniRrzAgUBJ6B2vYC2hFB09lTQ=="
+  "resolved" "https://registry.npmjs.org/esy/-/esy-0.6.12.tgz"
+  "version" "0.6.12"
 
-reanalyze@^1.6.0:
-  version "1.16.0"
-  resolved "https://registry.yarnpkg.com/reanalyze/-/reanalyze-1.16.0.tgz#e0935acb797d75e62d7b4f5dceffc6fdd52e1950"
-  integrity sha512-U8fbzKxKrQCcE9pFcrBQ4E1/n+3TlTaga8CQS7Qcys6zyhDLYXCbdGp5V7g+UcM2AI+xEusnPogUIwpnyNiVPQ==
+"ms@^2.1.1":
+  "integrity" "sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w=="
+  "resolved" "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz"
+  "version" "2.1.2"
 
-rescript@^9.1.1:
-  version "9.1.4"
-  resolved "https://registry.yarnpkg.com/rescript/-/rescript-9.1.4.tgz#1eb126f98d6c16942c0bf0df67c050198e580515"
-  integrity sha512-aXANK4IqecJzdnDpJUsU6pxMViCR5ogAxzuqS0mOr8TloMnzAjJFu63fjD6LCkWrKAhlMkFFzQvVQYaAaVkFXw==
+"reanalyze@^1.6.0":
+  "integrity" "sha512-uFnnLu7VTH1vkMleJPlXgSTL64YWhObcGzT5M3Y4XQM3W6kiuG4LRqYNPHxSq9xgo48MMyl7wSAR/5qQL4fusQ=="
+  "resolved" "https://registry.npmjs.org/reanalyze/-/reanalyze-1.6.0.tgz"
+  "version" "1.6.0"
+
+"rescript@^9.1.1":
+  "integrity" "sha512-4wHvTDv3nyYnAPJHcg1RGG8z7u3HDiBf6RN3P/dITDv859Qo35aKOzJWQtfBzbAs0EKNafLqei3TnUqiAv6BwQ=="
+  "resolved" "https://registry.npmjs.org/rescript/-/rescript-9.1.2.tgz"
+  "version" "9.1.2"
