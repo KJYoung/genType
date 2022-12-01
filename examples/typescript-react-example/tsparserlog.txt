@@ -1,0 +1,1420 @@
+<ref *2> NodeObject {
+  pos: 32,
+  end: 74,
+  flags: 0,
+  modifierFlagsCache: 0,
+  transformFlags: 0,
+  parent: <ref *1> NodeObject {
+    pos: 26,
+    end: 74,
+    flags: 2,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: NodeObject {
+      pos: 0,
+      end: 75,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [SourceFileObject],
+      kind: 225,
+      decorators: undefined,
+      modifiers: [Array],
+      declarationList: [Circular *1]
+    },
+    kind: 243,
+    declarations: [ [Circular *2], pos: 32, end: 74 ],
+    _children: [ [TokenObject], [NodeObject] ]
+  },
+  kind: 242,
+  name: IdentifierObject {
+    pos: 32,
+    end: 38,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 75,
+    escapedText: 'round'
+  },
+  type: <ref *3> NodeObject {
+    pos: 39,
+    end: 61,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 170,
+    typeParameters: undefined,
+    parameters: [ [NodeObject], pos: 41, end: 50 ],
+    type: TokenObject {
+      pos: 54,
+      end: 61,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 140
+    }
+  },
+  initializer: <ref *4> NodeObject {
+    pos: 63,
+    end: 74,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 194,
+    expression: IdentifierObject {
+      pos: 63,
+      end: 68,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *4],
+      kind: 75,
+      escapedText: 'Math'
+    },
+    questionDotToken: undefined,
+    name: IdentifierObject {
+      pos: 69,
+      end: 74,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *4],
+      kind: 75,
+      escapedText: 'round'
+    }
+  }
+}
+<ref *2> NodeObject {
+  pos: 88,
+  end: 105,
+  flags: 0,
+  modifierFlagsCache: 0,
+  transformFlags: 0,
+  parent: <ref *1> NodeObject {
+    pos: 82,
+    end: 105,
+    flags: 2,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: NodeObject {
+      pos: 75,
+      end: 106,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [SourceFileObject],
+      kind: 225,
+      decorators: undefined,
+      modifiers: [Array],
+      declarationList: [Circular *1]
+    },
+    kind: 243,
+    declarations: [ [Circular *2], pos: 88, end: 105 ],
+    _children: [ [TokenObject], [NodeObject] ]
+  },
+  kind: 242,
+  name: IdentifierObject {
+    pos: 88,
+    end: 101,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 75,
+    escapedText: 'integerValue'
+  },
+  type: undefined,
+  initializer: TokenObject {
+    pos: 103,
+    end: 105,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 8,
+    text: '3',
+    numericLiteralFlags: 0
+  }
+}
+<ref *2> NodeObject {
+  pos: 119,
+  end: 136,
+  flags: 0,
+  modifierFlagsCache: 0,
+  transformFlags: 0,
+  parent: <ref *1> NodeObject {
+    pos: 113,
+    end: 136,
+    flags: 2,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: NodeObject {
+      pos: 106,
+      end: 137,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [SourceFileObject],
+      kind: 225,
+      decorators: undefined,
+      modifiers: [Array],
+      declarationList: [Circular *1]
+    },
+    kind: 243,
+    declarations: [ [Circular *2], pos: 119, end: 136 ],
+    _children: [ [TokenObject], [NodeObject] ]
+  },
+  kind: 242,
+  name: IdentifierObject {
+    pos: 119,
+    end: 130,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 75,
+    escapedText: 'floatValue'
+  },
+  type: undefined,
+  initializer: TokenObject {
+    pos: 132,
+    end: 136,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 8,
+    text: '3.4',
+    numericLiteralFlags: 0
+  }
+}
+<ref *2> NodeObject {
+  pos: 150,
+  end: 173,
+  flags: 0,
+  modifierFlagsCache: 0,
+  transformFlags: 0,
+  parent: <ref *1> NodeObject {
+    pos: 144,
+    end: 173,
+    flags: 2,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: NodeObject {
+      pos: 137,
+      end: 174,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [SourceFileObject],
+      kind: 225,
+      decorators: undefined,
+      modifiers: [Array],
+      declarationList: [Circular *1]
+    },
+    kind: 243,
+    declarations: [ [Circular *2], pos: 150, end: 173 ],
+    _children: [ [TokenObject], [NodeObject] ]
+  },
+  kind: 242,
+  name: IdentifierObject {
+    pos: 150,
+    end: 162,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 75,
+    escapedText: 'stringValue'
+  },
+  type: undefined,
+  initializer: TokenObject {
+    pos: 164,
+    end: 173,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 10,
+    text: 'string'
+  }
+}
+<ref *2> NodeObject {
+  pos: 237,
+  end: 357,
+  flags: 0,
+  modifierFlagsCache: 0,
+  transformFlags: 0,
+  parent: <ref *1> NodeObject {
+    pos: 231,
+    end: 357,
+    flags: 2,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: NodeObject {
+      pos: 174,
+      end: 358,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [SourceFileObject],
+      kind: 225,
+      decorators: undefined,
+      modifiers: [Array],
+      declarationList: [Circular *1]
+    },
+    kind: 243,
+    declarations: [ [Circular *2], pos: 237, end: 357 ],
+    _children: [ [TokenObject], [NodeObject] ]
+  },
+  kind: 242,
+  name: IdentifierObject {
+    pos: 237,
+    end: 242,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 75,
+    escapedText: 'area'
+  },
+  type: undefined,
+  initializer: <ref *3> NodeObject {
+    pos: 244,
+    end: 357,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 201,
+    modifiers: undefined,
+    asteriskToken: undefined,
+    name: undefined,
+    typeParameters: undefined,
+    parameters: [ [NodeObject], pos: 254, end: 286 ],
+    type: TokenObject {
+      pos: 288,
+      end: 295,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 140
+    },
+    body: NodeObject {
+      pos: 295,
+      end: 357,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 223,
+      multiLine: true,
+      statements: [Array]
+    }
+  }
+}
+<ref *2> NodeObject {
+  pos: 419,
+  end: 494,
+  flags: 0,
+  modifierFlagsCache: 0,
+  transformFlags: 0,
+  parent: <ref *1> NodeObject {
+    pos: 413,
+    end: 494,
+    flags: 2,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: NodeObject {
+      pos: 405,
+      end: 495,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [SourceFileObject],
+      kind: 225,
+      decorators: undefined,
+      modifiers: [Array],
+      declarationList: [Circular *1]
+    },
+    kind: 243,
+    declarations: [ [Circular *2], pos: 419, end: 494 ],
+    _children: [ [TokenObject], [NodeObject] ]
+  },
+  kind: 242,
+  name: IdentifierObject {
+    pos: 419,
+    end: 436,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 75,
+    escapedText: 'returnMixedArray'
+  },
+  type: undefined,
+  initializer: <ref *3> NodeObject {
+    pos: 438,
+    end: 494,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 201,
+    modifiers: undefined,
+    asteriskToken: undefined,
+    name: undefined,
+    typeParameters: undefined,
+    parameters: [ pos: 448, end: 448 ],
+    type: NodeObject {
+      pos: 451,
+      end: 474,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 169,
+      typeName: [IdentifierObject],
+      typeArguments: [Array]
+    },
+    body: NodeObject {
+      pos: 474,
+      end: 494,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 223,
+      multiLine: true,
+      statements: [Array]
+    }
+  }
+}
+<ref *2> NodeObject {
+  pos: 805,
+  end: 871,
+  flags: 0,
+  modifierFlagsCache: 0,
+  transformFlags: 0,
+  parent: <ref *1> NodeObject {
+    pos: 799,
+    end: 871,
+    flags: 2,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: NodeObject {
+      pos: 742,
+      end: 872,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [SourceFileObject],
+      kind: 225,
+      decorators: undefined,
+      modifiers: [Array],
+      declarationList: [Circular *1]
+    },
+    kind: 243,
+    declarations: [ [Circular *2], pos: 805, end: 871 ],
+    _children: [ [TokenObject], [NodeObject] ]
+  },
+  kind: 242,
+  name: IdentifierObject {
+    pos: 805,
+    end: 814,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 75,
+    escapedText: 'useColor'
+  },
+  type: undefined,
+  initializer: <ref *3> NodeObject {
+    pos: 816,
+    end: 871,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 201,
+    modifiers: undefined,
+    asteriskToken: undefined,
+    name: undefined,
+    typeParameters: undefined,
+    parameters: [ [NodeObject], pos: 826, end: 846 ],
+    type: TokenObject {
+      pos: 848,
+      end: 855,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 140
+    },
+    body: NodeObject {
+      pos: 855,
+      end: 871,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 223,
+      multiLine: true,
+      statements: [Array]
+    }
+  }
+}
+<ref *2> NodeObject {
+  pos: 886,
+  end: 957,
+  flags: 0,
+  modifierFlagsCache: 0,
+  transformFlags: 0,
+  parent: <ref *1> NodeObject {
+    pos: 880,
+    end: 957,
+    flags: 2,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: NodeObject {
+      pos: 872,
+      end: 958,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [SourceFileObject],
+      kind: 225,
+      decorators: undefined,
+      modifiers: [Array],
+      declarationList: [Circular *1]
+    },
+    kind: 243,
+    declarations: [ [Circular *2], pos: 886, end: 957 ],
+    _children: [ [TokenObject], [NodeObject] ]
+  },
+  kind: 242,
+  name: IdentifierObject {
+    pos: 886,
+    end: 898,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 75,
+    escapedText: 'higherOrder'
+  },
+  type: undefined,
+  initializer: <ref *3> NodeObject {
+    pos: 900,
+    end: 957,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 202,
+    modifiers: undefined,
+    typeParameters: undefined,
+    parameters: [ [NodeObject], pos: 902, end: 941 ],
+    equalsGreaterThanToken: TokenObject {
+      pos: 942,
+      end: 945,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 38
+    },
+    body: NodeObject {
+      pos: 945,
+      end: 957,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 196,
+      expression: [IdentifierObject],
+      questionDotToken: undefined,
+      arguments: [Array]
+    }
+  }
+}
+<ref *2> NodeObject {
+  pos: 972,
+  end: 1003,
+  flags: 0,
+  modifierFlagsCache: 0,
+  transformFlags: 0,
+  parent: <ref *1> NodeObject {
+    pos: 966,
+    end: 1003,
+    flags: 2,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: NodeObject {
+      pos: 958,
+      end: 1004,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [SourceFileObject],
+      kind: 225,
+      decorators: undefined,
+      modifiers: [Array],
+      declarationList: [Circular *1]
+    },
+    kind: 243,
+    declarations: [ [Circular *2], pos: 972, end: 1003 ],
+    _children: [ [TokenObject], [NodeObject] ]
+  },
+  kind: 242,
+  name: IdentifierObject {
+    pos: 972,
+    end: 987,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 75,
+    escapedText: 'convertVariant'
+  },
+  type: undefined,
+  initializer: <ref *3> NodeObject {
+    pos: 989,
+    end: 1003,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 202,
+    modifiers: undefined,
+    typeParameters: undefined,
+    parameters: [ [NodeObject], pos: 991, end: 997 ],
+    equalsGreaterThanToken: TokenObject {
+      pos: 998,
+      end: 1001,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 38
+    },
+    body: IdentifierObject {
+      pos: 1001,
+      end: 1003,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 75,
+      escapedText: 'x'
+    }
+  }
+}
+<ref *2> NodeObject {
+  pos: 1018,
+  end: 1050,
+  flags: 0,
+  modifierFlagsCache: 0,
+  transformFlags: 0,
+  parent: <ref *1> NodeObject {
+    pos: 1012,
+    end: 1050,
+    flags: 2,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: NodeObject {
+      pos: 1004,
+      end: 1051,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [SourceFileObject],
+      kind: 225,
+      decorators: undefined,
+      modifiers: [Array],
+      declarationList: [Circular *1]
+    },
+    kind: 243,
+    declarations: [ [Circular *2], pos: 1018, end: 1050 ],
+    _children: [ [TokenObject], [NodeObject] ]
+  },
+  kind: 242,
+  name: IdentifierObject {
+    pos: 1018,
+    end: 1030,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 75,
+    escapedText: 'polymorphic'
+  },
+  type: undefined,
+  initializer: <ref *3> NodeObject {
+    pos: 1032,
+    end: 1050,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 202,
+    modifiers: undefined,
+    typeParameters: [ [NodeObject], pos: 1034, end: 1035 ],
+    parameters: [ [NodeObject], pos: 1037, end: 1041 ],
+    type: NodeObject {
+      pos: 1043,
+      end: 1045,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 169,
+      typeName: [IdentifierObject]
+    },
+    equalsGreaterThanToken: TokenObject {
+      pos: 1045,
+      end: 1048,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 38
+    },
+    body: IdentifierObject {
+      pos: 1048,
+      end: 1050,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 75,
+      escapedText: 'x'
+    }
+  }
+}
+<ref *2> NodeObject {
+  pos: 32,
+  end: 74,
+  flags: 0,
+  modifierFlagsCache: 0,
+  transformFlags: 0,
+  parent: <ref *1> NodeObject {
+    pos: 26,
+    end: 74,
+    flags: 2,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: NodeObject {
+      pos: 0,
+      end: 75,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [SourceFileObject],
+      kind: 225,
+      decorators: undefined,
+      modifiers: [Array],
+      declarationList: [Circular *1]
+    },
+    kind: 243,
+    declarations: [ [Circular *2], pos: 32, end: 74 ],
+    _children: [ [TokenObject], [NodeObject] ]
+  },
+  kind: 242,
+  name: IdentifierObject {
+    pos: 32,
+    end: 38,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 75,
+    escapedText: 'round'
+  },
+  type: <ref *3> NodeObject {
+    pos: 39,
+    end: 61,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 170,
+    typeParameters: undefined,
+    parameters: [ [NodeObject], pos: 41, end: 50 ],
+    type: TokenObject {
+      pos: 54,
+      end: 61,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 140
+    }
+  },
+  initializer: <ref *4> NodeObject {
+    pos: 63,
+    end: 74,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 194,
+    expression: IdentifierObject {
+      pos: 63,
+      end: 68,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *4],
+      kind: 75,
+      escapedText: 'Math'
+    },
+    questionDotToken: undefined,
+    name: IdentifierObject {
+      pos: 69,
+      end: 74,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *4],
+      kind: 75,
+      escapedText: 'round'
+    }
+  }
+}
+<ref *2> NodeObject {
+  pos: 88,
+  end: 105,
+  flags: 0,
+  modifierFlagsCache: 0,
+  transformFlags: 0,
+  parent: <ref *1> NodeObject {
+    pos: 82,
+    end: 105,
+    flags: 2,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: NodeObject {
+      pos: 75,
+      end: 106,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [SourceFileObject],
+      kind: 225,
+      decorators: undefined,
+      modifiers: [Array],
+      declarationList: [Circular *1]
+    },
+    kind: 243,
+    declarations: [ [Circular *2], pos: 88, end: 105 ],
+    _children: [ [TokenObject], [NodeObject] ]
+  },
+  kind: 242,
+  name: IdentifierObject {
+    pos: 88,
+    end: 101,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 75,
+    escapedText: 'integerValue'
+  },
+  type: undefined,
+  initializer: TokenObject {
+    pos: 103,
+    end: 105,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 8,
+    text: '3',
+    numericLiteralFlags: 0
+  }
+}
+<ref *2> NodeObject {
+  pos: 119,
+  end: 136,
+  flags: 0,
+  modifierFlagsCache: 0,
+  transformFlags: 0,
+  parent: <ref *1> NodeObject {
+    pos: 113,
+    end: 136,
+    flags: 2,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: NodeObject {
+      pos: 106,
+      end: 137,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [SourceFileObject],
+      kind: 225,
+      decorators: undefined,
+      modifiers: [Array],
+      declarationList: [Circular *1]
+    },
+    kind: 243,
+    declarations: [ [Circular *2], pos: 119, end: 136 ],
+    _children: [ [TokenObject], [NodeObject] ]
+  },
+  kind: 242,
+  name: IdentifierObject {
+    pos: 119,
+    end: 130,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 75,
+    escapedText: 'floatValue'
+  },
+  type: undefined,
+  initializer: TokenObject {
+    pos: 132,
+    end: 136,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 8,
+    text: '3.4',
+    numericLiteralFlags: 0
+  }
+}
+<ref *2> NodeObject {
+  pos: 150,
+  end: 173,
+  flags: 0,
+  modifierFlagsCache: 0,
+  transformFlags: 0,
+  parent: <ref *1> NodeObject {
+    pos: 144,
+    end: 173,
+    flags: 2,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: NodeObject {
+      pos: 137,
+      end: 174,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [SourceFileObject],
+      kind: 225,
+      decorators: undefined,
+      modifiers: [Array],
+      declarationList: [Circular *1]
+    },
+    kind: 243,
+    declarations: [ [Circular *2], pos: 150, end: 173 ],
+    _children: [ [TokenObject], [NodeObject] ]
+  },
+  kind: 242,
+  name: IdentifierObject {
+    pos: 150,
+    end: 162,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 75,
+    escapedText: 'stringValue'
+  },
+  type: undefined,
+  initializer: TokenObject {
+    pos: 164,
+    end: 173,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 10,
+    text: 'string'
+  }
+}
+<ref *2> NodeObject {
+  pos: 237,
+  end: 357,
+  flags: 0,
+  modifierFlagsCache: 0,
+  transformFlags: 0,
+  parent: <ref *1> NodeObject {
+    pos: 231,
+    end: 357,
+    flags: 2,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: NodeObject {
+      pos: 174,
+      end: 358,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [SourceFileObject],
+      kind: 225,
+      decorators: undefined,
+      modifiers: [Array],
+      declarationList: [Circular *1]
+    },
+    kind: 243,
+    declarations: [ [Circular *2], pos: 237, end: 357 ],
+    _children: [ [TokenObject], [NodeObject] ]
+  },
+  kind: 242,
+  name: IdentifierObject {
+    pos: 237,
+    end: 242,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 75,
+    escapedText: 'area'
+  },
+  type: undefined,
+  initializer: <ref *3> NodeObject {
+    pos: 244,
+    end: 357,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 201,
+    modifiers: undefined,
+    asteriskToken: undefined,
+    name: undefined,
+    typeParameters: undefined,
+    parameters: [ [NodeObject], pos: 254, end: 286 ],
+    type: TokenObject {
+      pos: 288,
+      end: 295,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 140
+    },
+    body: NodeObject {
+      pos: 295,
+      end: 357,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 223,
+      multiLine: true,
+      statements: [Array]
+    }
+  }
+}
+<ref *2> NodeObject {
+  pos: 419,
+  end: 494,
+  flags: 0,
+  modifierFlagsCache: 0,
+  transformFlags: 0,
+  parent: <ref *1> NodeObject {
+    pos: 413,
+    end: 494,
+    flags: 2,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: NodeObject {
+      pos: 405,
+      end: 495,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [SourceFileObject],
+      kind: 225,
+      decorators: undefined,
+      modifiers: [Array],
+      declarationList: [Circular *1]
+    },
+    kind: 243,
+    declarations: [ [Circular *2], pos: 419, end: 494 ],
+    _children: [ [TokenObject], [NodeObject] ]
+  },
+  kind: 242,
+  name: IdentifierObject {
+    pos: 419,
+    end: 436,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 75,
+    escapedText: 'returnMixedArray'
+  },
+  type: undefined,
+  initializer: <ref *3> NodeObject {
+    pos: 438,
+    end: 494,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 201,
+    modifiers: undefined,
+    asteriskToken: undefined,
+    name: undefined,
+    typeParameters: undefined,
+    parameters: [ pos: 448, end: 448 ],
+    type: NodeObject {
+      pos: 451,
+      end: 474,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 169,
+      typeName: [IdentifierObject],
+      typeArguments: [Array]
+    },
+    body: NodeObject {
+      pos: 474,
+      end: 494,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 223,
+      multiLine: true,
+      statements: [Array]
+    }
+  }
+}
+<ref *2> NodeObject {
+  pos: 805,
+  end: 871,
+  flags: 0,
+  modifierFlagsCache: 0,
+  transformFlags: 0,
+  parent: <ref *1> NodeObject {
+    pos: 799,
+    end: 871,
+    flags: 2,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: NodeObject {
+      pos: 742,
+      end: 872,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [SourceFileObject],
+      kind: 225,
+      decorators: undefined,
+      modifiers: [Array],
+      declarationList: [Circular *1]
+    },
+    kind: 243,
+    declarations: [ [Circular *2], pos: 805, end: 871 ],
+    _children: [ [TokenObject], [NodeObject] ]
+  },
+  kind: 242,
+  name: IdentifierObject {
+    pos: 805,
+    end: 814,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 75,
+    escapedText: 'useColor'
+  },
+  type: undefined,
+  initializer: <ref *3> NodeObject {
+    pos: 816,
+    end: 871,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 201,
+    modifiers: undefined,
+    asteriskToken: undefined,
+    name: undefined,
+    typeParameters: undefined,
+    parameters: [ [NodeObject], pos: 826, end: 846 ],
+    type: TokenObject {
+      pos: 848,
+      end: 855,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 140
+    },
+    body: NodeObject {
+      pos: 855,
+      end: 871,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 223,
+      multiLine: true,
+      statements: [Array]
+    }
+  }
+}
+<ref *2> NodeObject {
+  pos: 886,
+  end: 957,
+  flags: 0,
+  modifierFlagsCache: 0,
+  transformFlags: 0,
+  parent: <ref *1> NodeObject {
+    pos: 880,
+    end: 957,
+    flags: 2,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: NodeObject {
+      pos: 872,
+      end: 958,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [SourceFileObject],
+      kind: 225,
+      decorators: undefined,
+      modifiers: [Array],
+      declarationList: [Circular *1]
+    },
+    kind: 243,
+    declarations: [ [Circular *2], pos: 886, end: 957 ],
+    _children: [ [TokenObject], [NodeObject] ]
+  },
+  kind: 242,
+  name: IdentifierObject {
+    pos: 886,
+    end: 898,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 75,
+    escapedText: 'higherOrder'
+  },
+  type: undefined,
+  initializer: <ref *3> NodeObject {
+    pos: 900,
+    end: 957,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 202,
+    modifiers: undefined,
+    typeParameters: undefined,
+    parameters: [ [NodeObject], pos: 902, end: 941 ],
+    equalsGreaterThanToken: TokenObject {
+      pos: 942,
+      end: 945,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 38
+    },
+    body: NodeObject {
+      pos: 945,
+      end: 957,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 196,
+      expression: [IdentifierObject],
+      questionDotToken: undefined,
+      arguments: [Array]
+    }
+  }
+}
+<ref *2> NodeObject {
+  pos: 972,
+  end: 1003,
+  flags: 0,
+  modifierFlagsCache: 0,
+  transformFlags: 0,
+  parent: <ref *1> NodeObject {
+    pos: 966,
+    end: 1003,
+    flags: 2,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: NodeObject {
+      pos: 958,
+      end: 1004,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [SourceFileObject],
+      kind: 225,
+      decorators: undefined,
+      modifiers: [Array],
+      declarationList: [Circular *1]
+    },
+    kind: 243,
+    declarations: [ [Circular *2], pos: 972, end: 1003 ],
+    _children: [ [TokenObject], [NodeObject] ]
+  },
+  kind: 242,
+  name: IdentifierObject {
+    pos: 972,
+    end: 987,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 75,
+    escapedText: 'convertVariant'
+  },
+  type: undefined,
+  initializer: <ref *3> NodeObject {
+    pos: 989,
+    end: 1003,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 202,
+    modifiers: undefined,
+    typeParameters: undefined,
+    parameters: [ [NodeObject], pos: 991, end: 997 ],
+    equalsGreaterThanToken: TokenObject {
+      pos: 998,
+      end: 1001,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 38
+    },
+    body: IdentifierObject {
+      pos: 1001,
+      end: 1003,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 75,
+      escapedText: 'x'
+    }
+  }
+}
+<ref *2> NodeObject {
+  pos: 1018,
+  end: 1050,
+  flags: 0,
+  modifierFlagsCache: 0,
+  transformFlags: 0,
+  parent: <ref *1> NodeObject {
+    pos: 1012,
+    end: 1050,
+    flags: 2,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: NodeObject {
+      pos: 1004,
+      end: 1051,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [SourceFileObject],
+      kind: 225,
+      decorators: undefined,
+      modifiers: [Array],
+      declarationList: [Circular *1]
+    },
+    kind: 243,
+    declarations: [ [Circular *2], pos: 1018, end: 1050 ],
+    _children: [ [TokenObject], [NodeObject] ]
+  },
+  kind: 242,
+  name: IdentifierObject {
+    pos: 1018,
+    end: 1030,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 75,
+    escapedText: 'polymorphic'
+  },
+  type: undefined,
+  initializer: <ref *3> NodeObject {
+    pos: 1032,
+    end: 1050,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 202,
+    modifiers: undefined,
+    typeParameters: [ [NodeObject], pos: 1034, end: 1035 ],
+    parameters: [ [NodeObject], pos: 1037, end: 1041 ],
+    type: NodeObject {
+      pos: 1043,
+      end: 1045,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 169,
+      typeName: [IdentifierObject]
+    },
+    equalsGreaterThanToken: TokenObject {
+      pos: 1045,
+      end: 1048,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 38
+    },
+    body: IdentifierObject {
+      pos: 1048,
+      end: 1050,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 75,
+      escapedText: 'x'
+    }
+  }
+}
+round
+VariableDeclaration {
+  name: 'round',
+  isConst: true,
+  isExported: true,
+  type: '(_: number) => number',
+  start: 20,
+  end: 75
+}
+(_: number) => number
+integerValue
+VariableDeclaration {
+  name: 'integerValue',
+  isConst: true,
+  isExported: true,
+  type: undefined,
+  start: 76,
+  end: 106
+}
+undefined

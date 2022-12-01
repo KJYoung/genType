@@ -1,0 +1,3 @@
+[submodule "node-typescript-parser"]
+	path = node-typescript-parser
+	url = https://github.com/KJYoung/node-typescript-parser
