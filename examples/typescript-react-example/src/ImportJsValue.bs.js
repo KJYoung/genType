@@ -19,7 +19,7 @@ var roundedNumber = ImportJsValueGen$1.round(1.8);
 
 var areaValue = ImportJsValueGen$1.area({
       x: 3,
-      y: undefined
+      y: 2
     });
 
 function getAbs(x) {

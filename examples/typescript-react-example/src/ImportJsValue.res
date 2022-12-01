@@ -9,7 +9,7 @@ round: float => float = "round"
 @genType
 type point = {
   x: int,
-  y: option<int>,
+  y: int,
 }
 
 @genType.import("./MyMath")
@@ -25,7 +25,7 @@ external returnMixedArray: unit => array<numberOrString> = "returnMixedArray"
 
 @genType let roundedNumber = round(1.8)
 
-@genType let areaValue = area({x: 3, y: None})
+@genType let areaValue = area({x: 3, y: 2})
 
 module AbsoluteValue = {
   @genType.import(("./MyMath", "AbsoluteValue"))
