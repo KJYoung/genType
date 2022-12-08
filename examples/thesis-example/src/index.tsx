@@ -2,8 +2,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import App from "./App";
 import * as ImportJsValue from "./ImportJsValue.gen";
-import "./index.css";
-import * as MyMath from "./MyMath";
+import * as TypeRepertoire from "./TypeRepertoire";
 
 // tslint:disable-next-line:no-console
 const consoleLog = console.log;
@@ -24,7 +23,7 @@ ReactDOM.render(
   document.getElementById("root") as HTMLElement
 );
 
-const absoluteValueInstance = new MyMath.AbsoluteValue();
+const absoluteValueInstance = new TypeRepertoire.AbsoluteValue();
 absoluteValueInstance.prop = -3;
 consoleLog("absoluteValueInstance", absoluteValueInstance);
 

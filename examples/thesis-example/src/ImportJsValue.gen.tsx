@@ -2,82 +2,82 @@
 /* eslint-disable import/first */
 
 
-import {round as roundNotChecked} from './MyMath';
+import {round as roundNotChecked} from './TypeRepertoire';
 
-import {integerValue as integerValueNotChecked} from './MyMath';
+import {integerValue as integerValueNotChecked} from './TypeRepertoire';
 
-import {floatValue as floatValueNotChecked} from './MyMath';
+import {floatValue as floatValueNotChecked} from './TypeRepertoire';
 
-import {stringValue as stringValueNotChecked} from './MyMath';
+import {stringValue as stringValueNotChecked} from './TypeRepertoire';
 
-import {area as areaNotChecked} from './MyMath';
+import {area as areaNotChecked} from './TypeRepertoire';
 
-import {returnMixedArray as returnMixedArrayNotChecked} from './MyMath';
+import {returnMixedArray as returnMixedArrayNotChecked} from './TypeRepertoire';
 
-import {useColor as useColorNotChecked} from './MyMath';
+import {useColor as useColorNotChecked} from './TypeRepertoire';
 
-import {higherOrder as higherOrderNotChecked} from './MyMath';
+import {higherOrder as higherOrderNotChecked} from './TypeRepertoire';
 
-import {convertVariant as convertVariantNotChecked} from './MyMath';
+import {convertVariant as convertVariantNotChecked} from './TypeRepertoire';
 
-import {polymorphic as polymorphicNotChecked} from './MyMath';
+import {polymorphic as polymorphicNotChecked} from './TypeRepertoire';
 
-import {default as defaultNotChecked} from './MyMath';
+import {default as defaultNotChecked} from './TypeRepertoire';
 
 // @ts-ignore: Implicit any on import
 import * as Curry__Es6Import from 'rescript/lib/es6/curry.js';
 const Curry: any = Curry__Es6Import;
 
-// In case of type error, check the type of 'round' in 'ImportJsValue.re' and './MyMath'.
+// In case of type error, check the type of 'round' in 'ImportJsValue.re' and './TypeRepertoire'.
 /* round | TS: [(_: number) => number] | RES: [(_1:number) => number] */
 export const roundTypeChecked: (_1:number) => number = roundNotChecked;
 
 // Export 'round' early to allow circular import from the '.bs.js' file.
 export const round: unknown = roundTypeChecked as (_1:number) => number;
 
-// In case of type error, check the type of 'integerValue' in 'ImportJsValue.re' and './MyMath'.
+// In case of type error, check the type of 'integerValue' in 'ImportJsValue.re' and './TypeRepertoire'.
 /* integerValue | TS: [number] | RES: [number] */
 export const integerValueTypeChecked: number = integerValueNotChecked;
 
 // Export 'integerValue' early to allow circular import from the '.bs.js' file.
 export const integerValue: unknown = integerValueTypeChecked as number;
 
-// In case of type error, check the type of 'floatValue' in 'ImportJsValue.re' and './MyMath'.
+// In case of type error, check the type of 'floatValue' in 'ImportJsValue.re' and './TypeRepertoire'.
 /* floatValue | TS: [number] | RES: [number] */
 export const floatValueTypeChecked: number = floatValueNotChecked;
 
 // Export 'floatValue' early to allow circular import from the '.bs.js' file.
 export const floatValue: unknown = floatValueTypeChecked as number;
 
-// In case of type error, check the type of 'stringValue' in 'ImportJsValue.re' and './MyMath'.
+// In case of type error, check the type of 'stringValue' in 'ImportJsValue.re' and './TypeRepertoire'.
 /* stringValue | TS: [string] | RES: [string] */
 export const stringValueTypeChecked: string = stringValueNotChecked;
 
 // Export 'stringValue' early to allow circular import from the '.bs.js' file.
 export const stringValue: unknown = stringValueTypeChecked as string;
 
-// In case of type error, check the type of 'area' in 'ImportJsValue.re' and './MyMath'.
+// In case of type error, check the type of 'area' in 'ImportJsValue.re' and './TypeRepertoire'.
 /* area | TS: [number] | RES: [(_1:point) => number] */
 export const areaTypeChecked: (_1:point) => number = areaNotChecked;
 
 // Export 'area' early to allow circular import from the '.bs.js' file.
 export const area: unknown = areaTypeChecked as (_1:point) => number;
 
-// In case of type error, check the type of 'returnMixedArray' in 'ImportJsValue.re' and './MyMath'.
+// In case of type error, check the type of 'returnMixedArray' in 'ImportJsValue.re' and './TypeRepertoire'.
 /* returnMixedArray | TS: [Array<number | string>] | RES: [() => numberOrString[]] */
 export const returnMixedArrayTypeChecked: () => numberOrString[] = returnMixedArrayNotChecked;
 
 // Export 'returnMixedArray' early to allow circular import from the '.bs.js' file.
 export const returnMixedArray: unknown = returnMixedArrayTypeChecked as () => numberOrString[];
 
-// In case of type error, check the type of 'useColor' in 'ImportJsValue.re' and './MyMath'.
+// In case of type error, check the type of 'useColor' in 'ImportJsValue.re' and './TypeRepertoire'.
 /* useColor | TS: [number] | RES: [(_1:color) => number] */
 export const useColorTypeChecked: (_1:color) => number = useColorNotChecked;
 
 // Export 'useColor' early to allow circular import from the '.bs.js' file.
 export const useColor: unknown = useColorTypeChecked as (_1:color) => number;
 
-// In case of type error, check the type of 'higherOrder' in 'ImportJsValue.re' and './MyMath'.
+// In case of type error, check the type of 'higherOrder' in 'ImportJsValue.re' and './TypeRepertoire'.
 /* higherOrder | TS: [(_1: number, _2: number) => number => unknown] | RES: [(_1:((_1:number, _2:number) => number)) => number] */
 export const higherOrderTypeChecked: (_1:((_1:number, _2:number) => number)) => number = higherOrderNotChecked;
 
@@ -90,7 +90,7 @@ export const higherOrder: unknown = function (Arg1: any) {
   return result
 } as (_1:((_1:number, _2:number) => number)) => number;
 
-// In case of type error, check the type of 'convertVariant' in 'ImportJsValue.re' and './MyMath'.
+// In case of type error, check the type of 'convertVariant' in 'ImportJsValue.re' and './TypeRepertoire'.
 /* convertVariant | TS: [any => unknown] | RES: [(_1:variant) => variant] */
 export const convertVariantTypeChecked: (_1:variant) => variant = convertVariantNotChecked;
 
@@ -104,14 +104,14 @@ export const convertVariant: unknown = function (Arg1: any) {
     : {TAG: 1, _0:result.value} as any
 } as (_1:variant) => variant;
 
-// In case of type error, check the type of 'polymorphic' in 'ImportJsValue.re' and './MyMath'.
+// In case of type error, check the type of 'polymorphic' in 'ImportJsValue.re' and './TypeRepertoire'.
 /* polymorphic | TS: [T => unknown] | RES: [<a>(_1:a) => a] */
 export const polymorphicTypeChecked: <a>(_1:a) => a = polymorphicNotChecked;
 
 // Export 'polymorphic' early to allow circular import from the '.bs.js' file.
 export const polymorphic: unknown = polymorphicTypeChecked as <a>(_1:a) => a;
 
-// In case of type error, check the type of 'default' in 'ImportJsValue.re' and './MyMath'.
+// In case of type error, check the type of 'default' in 'ImportJsValue.re' and './TypeRepertoire'.
 /* default | TS: [Default or NotFound] | RES: [number] */
 export const defaultTypeChecked: number = defaultNotChecked;
 
@@ -121,17 +121,17 @@ export const $$default: unknown = defaultTypeChecked as number;
 // tslint:disable-next-line:no-var-requires
 const ImportJsValueBS = require('./ImportJsValue.bs');
 
-import type {AbsoluteValue as $$AbsoluteValue_t} from './MyMath';
+import type {AbsoluteValue as $$AbsoluteValue_t} from './TypeRepertoire';
 
-import type {num as $$myNum} from './MyMath';
+import type {num as $$myNum} from './TypeRepertoire';
 
-import type {num as $$num} from './MyMath';
+import type {num as $$num} from './TypeRepertoire';
 
-import type {numberOrString as $$numberOrString} from './MyMath';
+import type {numberOrString as $$numberOrString} from './TypeRepertoire';
 
-import type {polyType as $$polyType} from './MyMath';
+import type {polyType as $$polyType} from './TypeRepertoire';
 
-import type {stringFunction as $$stringFunction} from './MyMath';
+import type {stringFunction as $$stringFunction} from './TypeRepertoire';
 
 // tslint:disable-next-line:interface-over-type-literal
 export type point = { readonly x: number; readonly y: number };

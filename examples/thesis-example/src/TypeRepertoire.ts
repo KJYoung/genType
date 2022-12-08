@@ -4,7 +4,6 @@ export const round: (_: number) => number = Math.round;
 // export const round: (number) = 3;
 
 
-
 // Basic Type Literals ************************************************************
 export const integerValue = 3;                // number
 export const floatValue = 3.4;                // number
