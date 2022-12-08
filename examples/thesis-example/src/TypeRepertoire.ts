@@ -5,21 +5,6 @@ export type numberOrString = number | string;
 export type numberOrStringOrNull = number | string | null;
 export type complexUnion = number[] | string | ((x : number) => number) | null | undefined;
 
-// Basic Type Literals ************************************************************
-export const integerValue = 3;                // number
-export const floatValue = 3.4;                // number
-export const binaryValue = 0b1010;            // number
-export const calValue = 3 + 4;                // number
-export const calValue2 = 3 * 4 + 3 - 2;       // number
-export const calValue3 = calValue2 + 2;       // number
-export const calConversion = "33" + 2;        // string
-export const booleanValue = false;            // boolean
-export const booleanValue2 = true;            // boolean
-export const booleanValue3 = true || false;   // boolean
-export const booleanValue4 = true ? 3 : 22;   // number
-export const integerValueFromVar = integerValue;  // number
-export const stringValue = "string";          // string
-
 // Basic Structure Literals ************************************************************
 // list
 export const integerList = [1, 2, 3];                       // number[]

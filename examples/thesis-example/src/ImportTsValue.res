@@ -1,32 +1,61 @@
 @ocaml.doc("* Wrap TS values to be used from Reason")
 
-// Basic Type Literals ************************************************************
-@genType.import("./TypeRepertoire")
+// Basic Types from TypeBasics.ts ************************************************************
+// Literals
+@genType.import("./TypeBasics")
 external integerValue: int = "integerValue"
-@genType.import("./TypeRepertoire")
-external integerValueFromVar: int = "integerValueFromVar"
-@genType.import("./TypeRepertoire")
+@genType.import("./TypeBasics")
 external floatValue: float = "floatValue"
-@genType.import("./TypeRepertoire")
+@genType.import("./TypeBasics")
 external binaryValue: int = "binaryValue"
-@genType.import("./TypeRepertoire")
-external calValue: int = "calValue"
-@genType.import("./TypeRepertoire")
-external calValue2: int = "calValue2"
-@genType.import("./TypeRepertoire")
-external calValue3: int = "calValue3"
-
-@genType.import("./TypeRepertoire")
+@genType.import("./TypeBasics")
 external booleanValue: bool = "booleanValue"
-@genType.import("./TypeRepertoire")
+@genType.import("./TypeBasics")
 external booleanValue2: bool = "booleanValue2"
-@genType.import("./TypeRepertoire")
-external booleanValue3: bool = "booleanValue3"
-@genType.import("./TypeRepertoire")
-external booleanValue4: int = "booleanValue4"
-
-@genType.import("./TypeRepertoire")
+@genType.import("./TypeBasics")
 external stringValue: string = "stringValue"
+
+// number => number operations
+@genType.import("./TypeBasics")
+external opValue1: int = "opValue1"
+@genType.import("./TypeBasics")
+external opValue2: int = "opValue2"
+@genType.import("./TypeBasics")
+external opValue3: int = "opValue3"
+@genType.import("./TypeBasics")
+external opValue4: int = "opValue4"
+@genType.import("./TypeBasics")
+external opValue5: int = "opValue5"
+@genType.import("./TypeBasics")
+external opValue6: int = "opValue6"
+@genType.import("./TypeBasics")
+external opValue7: int = "opValue7"
+@genType.import("./TypeBasics")
+external opValue8: int = "opValue8"
+
+// number => boolean operations
+@genType.import("./TypeBasics")
+external opValue11: bool = "opValue11"
+@genType.import("./TypeBasics")
+external opValue12: bool = "opValue12"
+
+// boolean => boolean operations
+@genType.import("./TypeBasics")
+external opValue21: bool = "opValue21"
+@genType.import("./TypeBasics")
+external opValue22: bool = "opValue22"
+@genType.import("./TypeBasics")
+external opValue23: int = "opValue23"
+
+// any => string operations
+@genType.import("./TypeBasics")
+external opValue31: string = "opValue31"
+@genType.import("./TypeBasics")
+external opValue32: string = "opValue32"
+
+// variable assignment (number)
+@genType.import("./TypeBasics")
+external integerValueFromVar: int = "integerValueFromVar"
 
 // Basic Structure Literals ************************************************************
 // list

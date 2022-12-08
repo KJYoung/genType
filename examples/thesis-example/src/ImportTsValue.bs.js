@@ -5,27 +5,47 @@ import * as ImportTsValueGen$1 from "./ImportTsValue.gen";
 
 var integerValue = ImportTsValueGen$1.integerValue;
 
-var integerValueFromVar = ImportTsValueGen$1.integerValueFromVar;
-
 var floatValue = ImportTsValueGen$1.floatValue;
 
 var binaryValue = ImportTsValueGen$1.binaryValue;
-
-var calValue = ImportTsValueGen$1.calValue;
-
-var calValue2 = ImportTsValueGen$1.calValue2;
-
-var calValue3 = ImportTsValueGen$1.calValue3;
 
 var booleanValue = ImportTsValueGen$1.booleanValue;
 
 var booleanValue2 = ImportTsValueGen$1.booleanValue2;
 
-var booleanValue3 = ImportTsValueGen$1.booleanValue3;
-
-var booleanValue4 = ImportTsValueGen$1.booleanValue4;
-
 var stringValue = ImportTsValueGen$1.stringValue;
+
+var opValue1 = ImportTsValueGen$1.opValue1;
+
+var opValue2 = ImportTsValueGen$1.opValue2;
+
+var opValue3 = ImportTsValueGen$1.opValue3;
+
+var opValue4 = ImportTsValueGen$1.opValue4;
+
+var opValue5 = ImportTsValueGen$1.opValue5;
+
+var opValue6 = ImportTsValueGen$1.opValue6;
+
+var opValue7 = ImportTsValueGen$1.opValue7;
+
+var opValue8 = ImportTsValueGen$1.opValue8;
+
+var opValue11 = ImportTsValueGen$1.opValue11;
+
+var opValue12 = ImportTsValueGen$1.opValue12;
+
+var opValue21 = ImportTsValueGen$1.opValue21;
+
+var opValue22 = ImportTsValueGen$1.opValue22;
+
+var opValue23 = ImportTsValueGen$1.opValue23;
+
+var opValue31 = ImportTsValueGen$1.opValue31;
+
+var opValue32 = ImportTsValueGen$1.opValue32;
+
+var integerValueFromVar = ImportTsValueGen$1.integerValueFromVar;
 
 var integerList = ImportTsValueGen$1.integerList;
 
@@ -105,17 +125,27 @@ var $$default = ImportTsValueGen;
 
 export {
   integerValue ,
-  integerValueFromVar ,
   floatValue ,
   binaryValue ,
-  calValue ,
-  calValue2 ,
-  calValue3 ,
   booleanValue ,
   booleanValue2 ,
-  booleanValue3 ,
-  booleanValue4 ,
   stringValue ,
+  opValue1 ,
+  opValue2 ,
+  opValue3 ,
+  opValue4 ,
+  opValue5 ,
+  opValue6 ,
+  opValue7 ,
+  opValue8 ,
+  opValue11 ,
+  opValue12 ,
+  opValue21 ,
+  opValue22 ,
+  opValue23 ,
+  opValue31 ,
+  opValue32 ,
+  integerValueFromVar ,
   integerList ,
   integerList2 ,
   integerList3 ,
