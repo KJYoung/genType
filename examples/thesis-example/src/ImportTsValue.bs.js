@@ -3,17 +3,27 @@
 import ImportTsValueGen from "./ImportTsValue.gen";
 import * as ImportTsValueGen$1 from "./ImportTsValue.gen";
 
-function round(prim) {
-  return ImportTsValueGen$1.round(prim);
-}
-
 var integerValue = ImportTsValueGen$1.integerValue;
+
+var integerValueFromVar = ImportTsValueGen$1.integerValueFromVar;
 
 var floatValue = ImportTsValueGen$1.floatValue;
 
 var binaryValue = ImportTsValueGen$1.binaryValue;
 
+var calValue = ImportTsValueGen$1.calValue;
+
+var calValue2 = ImportTsValueGen$1.calValue2;
+
+var calValue3 = ImportTsValueGen$1.calValue3;
+
 var booleanValue = ImportTsValueGen$1.booleanValue;
+
+var booleanValue2 = ImportTsValueGen$1.booleanValue2;
+
+var booleanValue3 = ImportTsValueGen$1.booleanValue3;
+
+var booleanValue4 = ImportTsValueGen$1.booleanValue4;
 
 var stringValue = ImportTsValueGen$1.stringValue;
 
@@ -37,6 +47,8 @@ function funcInt2Int(prim) {
   return ImportTsValueGen$1.funcInt2Int(prim);
 }
 
+var funcInt2IntRet = ImportTsValueGen$1.funcInt2Int(5);
+
 function funcStr2Array(prim) {
   return ImportTsValueGen$1.funcStr2Array(prim);
 }
@@ -52,8 +64,6 @@ var unions = ImportTsValueGen$1.unions;
 function returnMixedArray(prim) {
   return ImportTsValueGen$1.returnMixedArray();
 }
-
-var roundedNumber = ImportTsValueGen$1.round(1.8);
 
 function getAbs(x) {
   return x.getAbs();
@@ -94,11 +104,17 @@ function polymorphic(prim) {
 var $$default = ImportTsValueGen;
 
 export {
-  round ,
   integerValue ,
+  integerValueFromVar ,
   floatValue ,
   binaryValue ,
+  calValue ,
+  calValue2 ,
+  calValue3 ,
   booleanValue ,
+  booleanValue2 ,
+  booleanValue3 ,
+  booleanValue4 ,
   stringValue ,
   integerList ,
   integerList2 ,
@@ -109,12 +125,12 @@ export {
   objectSimple ,
   objectComplex ,
   funcInt2Int ,
+  funcInt2IntRet ,
   funcStr2Array ,
   funcPoint2PointExact ,
   intORstrORnull ,
   unions ,
   returnMixedArray ,
-  roundedNumber ,
   AbsoluteValue ,
   useGetProp ,
   useGetAbs ,

@@ -2,15 +2,27 @@
 /* eslint-disable import/first */
 
 
-import {round as roundNotChecked} from './TypeRepertoire';
-
 import {integerValue as integerValueNotChecked} from './TypeRepertoire';
+
+import {integerValueFromVar as integerValueFromVarNotChecked} from './TypeRepertoire';
 
 import {floatValue as floatValueNotChecked} from './TypeRepertoire';
 
 import {binaryValue as binaryValueNotChecked} from './TypeRepertoire';
 
+import {calValue as calValueNotChecked} from './TypeRepertoire';
+
+import {calValue2 as calValue2NotChecked} from './TypeRepertoire';
+
+import {calValue3 as calValue3NotChecked} from './TypeRepertoire';
+
 import {booleanValue as booleanValueNotChecked} from './TypeRepertoire';
+
+import {booleanValue2 as booleanValue2NotChecked} from './TypeRepertoire';
+
+import {booleanValue3 as booleanValue3NotChecked} from './TypeRepertoire';
+
+import {booleanValue4 as booleanValue4NotChecked} from './TypeRepertoire';
 
 import {stringValue as stringValueNotChecked} from './TypeRepertoire';
 
@@ -56,19 +68,19 @@ import {default as defaultNotChecked} from './TypeRepertoire';
 import * as Curry__Es6Import from 'rescript/lib/es6/curry.js';
 const Curry: any = Curry__Es6Import;
 
-// In case of type error, check the type of 'round' in 'ImportTsValue.re' and './TypeRepertoire'.
-/* round | TS: [(_: number) => number] | RES: [(_1:number) => number] */
-export const roundTypeChecked: (_1:number) => number = roundNotChecked;
-
-// Export 'round' early to allow circular import from the '.bs.js' file.
-export const round: unknown = roundTypeChecked as (_1:number) => number;
-
 // In case of type error, check the type of 'integerValue' in 'ImportTsValue.re' and './TypeRepertoire'.
 /* integerValue | TS: [number] | RES: [number] */
 export const integerValueTypeChecked: number = integerValueNotChecked;
 
 // Export 'integerValue' early to allow circular import from the '.bs.js' file.
 export const integerValue: unknown = integerValueTypeChecked as number;
+
+// In case of type error, check the type of 'integerValueFromVar' in 'ImportTsValue.re' and './TypeRepertoire'.
+/* integerValueFromVar | TS: [Complicated or Undefined] | RES: [number] */
+export const integerValueFromVarTypeChecked: number = integerValueFromVarNotChecked;
+
+// Export 'integerValueFromVar' early to allow circular import from the '.bs.js' file.
+export const integerValueFromVar: unknown = integerValueFromVarTypeChecked as number;
 
 // In case of type error, check the type of 'floatValue' in 'ImportTsValue.re' and './TypeRepertoire'.
 /* floatValue | TS: [number] | RES: [number] */
@@ -84,12 +96,54 @@ export const binaryValueTypeChecked: number = binaryValueNotChecked;
 // Export 'binaryValue' early to allow circular import from the '.bs.js' file.
 export const binaryValue: unknown = binaryValueTypeChecked as number;
 
+// In case of type error, check the type of 'calValue' in 'ImportTsValue.re' and './TypeRepertoire'.
+/* calValue | TS: [number] | RES: [number] */
+export const calValueTypeChecked: number = calValueNotChecked;
+
+// Export 'calValue' early to allow circular import from the '.bs.js' file.
+export const calValue: unknown = calValueTypeChecked as number;
+
+// In case of type error, check the type of 'calValue2' in 'ImportTsValue.re' and './TypeRepertoire'.
+/* calValue2 | TS: [number] | RES: [number] */
+export const calValue2TypeChecked: number = calValue2NotChecked;
+
+// Export 'calValue2' early to allow circular import from the '.bs.js' file.
+export const calValue2: unknown = calValue2TypeChecked as number;
+
+// In case of type error, check the type of 'calValue3' in 'ImportTsValue.re' and './TypeRepertoire'.
+/* calValue3 | TS: [Complicated Expression 75] | RES: [number] */
+export const calValue3TypeChecked: number = calValue3NotChecked;
+
+// Export 'calValue3' early to allow circular import from the '.bs.js' file.
+export const calValue3: unknown = calValue3TypeChecked as number;
+
 // In case of type error, check the type of 'booleanValue' in 'ImportTsValue.re' and './TypeRepertoire'.
-/* booleanValue | TS: [Complicated or Undefined] | RES: [boolean] */
+/* booleanValue | TS: [boolean] | RES: [boolean] */
 export const booleanValueTypeChecked: boolean = booleanValueNotChecked;
 
 // Export 'booleanValue' early to allow circular import from the '.bs.js' file.
 export const booleanValue: unknown = booleanValueTypeChecked as boolean;
+
+// In case of type error, check the type of 'booleanValue2' in 'ImportTsValue.re' and './TypeRepertoire'.
+/* booleanValue2 | TS: [boolean] | RES: [boolean] */
+export const booleanValue2TypeChecked: boolean = booleanValue2NotChecked;
+
+// Export 'booleanValue2' early to allow circular import from the '.bs.js' file.
+export const booleanValue2: unknown = booleanValue2TypeChecked as boolean;
+
+// In case of type error, check the type of 'booleanValue3' in 'ImportTsValue.re' and './TypeRepertoire'.
+/* booleanValue3 | TS: [Complicated Expression 106] | RES: [boolean] */
+export const booleanValue3TypeChecked: boolean = booleanValue3NotChecked;
+
+// Export 'booleanValue3' early to allow circular import from the '.bs.js' file.
+export const booleanValue3: unknown = booleanValue3TypeChecked as boolean;
+
+// In case of type error, check the type of 'booleanValue4' in 'ImportTsValue.re' and './TypeRepertoire'.
+/* booleanValue4 | TS: [Complicated or Undefined] | RES: [number] */
+export const booleanValue4TypeChecked: number = booleanValue4NotChecked;
+
+// Export 'booleanValue4' early to allow circular import from the '.bs.js' file.
+export const booleanValue4: unknown = booleanValue4TypeChecked as number;
 
 // In case of type error, check the type of 'stringValue' in 'ImportTsValue.re' and './TypeRepertoire'.
 /* stringValue | TS: [string] | RES: [string] */
@@ -315,7 +369,7 @@ export type myNum = $$myNum;
 // tslint:disable-next-line:interface-over-type-literal
 export type polyType<a> = $$polyType<a>;
 
-export const roundedNumber: number = ImportTsValueBS.roundedNumber;
+export const funcInt2IntRet: number = ImportTsValueBS.funcInt2IntRet;
 
 export const useGetProp: (x:AbsoluteValue_t) => number = ImportTsValueBS.useGetProp;
 

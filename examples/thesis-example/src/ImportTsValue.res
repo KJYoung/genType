@@ -1,21 +1,29 @@
-@ocaml.doc("
-  * Wrap JS values to be used from Reason
-  ")
-@genType.import("./TypeRepertoire")
-external round: float => float = "round"
+@ocaml.doc("* Wrap TS values to be used from Reason")
 
 // Basic Type Literals ************************************************************
 @genType.import("./TypeRepertoire")
 external integerValue: int = "integerValue"
-
+@genType.import("./TypeRepertoire")
+external integerValueFromVar: int = "integerValueFromVar"
 @genType.import("./TypeRepertoire")
 external floatValue: float = "floatValue"
-
 @genType.import("./TypeRepertoire")
 external binaryValue: int = "binaryValue"
+@genType.import("./TypeRepertoire")
+external calValue: int = "calValue"
+@genType.import("./TypeRepertoire")
+external calValue2: int = "calValue2"
+@genType.import("./TypeRepertoire")
+external calValue3: int = "calValue3"
 
 @genType.import("./TypeRepertoire")
 external booleanValue: bool = "booleanValue"
+@genType.import("./TypeRepertoire")
+external booleanValue2: bool = "booleanValue2"
+@genType.import("./TypeRepertoire")
+external booleanValue3: bool = "booleanValue3"
+@genType.import("./TypeRepertoire")
+external booleanValue4: int = "booleanValue4"
 
 @genType.import("./TypeRepertoire")
 external stringValue: string = "stringValue"
@@ -82,6 +90,8 @@ external objectComplex: objectComplexT  = "objectComplex"
 @genType.import("./TypeRepertoire")
 external funcInt2Int: int => int = "funcInt2Int"
 
+@genType let funcInt2IntRet = funcInt2Int(5)
+
 @genType.import("./TypeRepertoire")
 external funcStr2Array: string => array<int> = "funcStr2Array"
 
@@ -108,8 +118,6 @@ external unions : complexUnion = "unions"
 // original MyMath ************************************************************
 @genType.import("./TypeRepertoire")
 external returnMixedArray: unit => array<numberOrString> = "returnMixedArray"
-
-@genType let roundedNumber = round(1.8)
 
 module AbsoluteValue = {
   @genType.import(("./TypeRepertoire", "AbsoluteValue"))

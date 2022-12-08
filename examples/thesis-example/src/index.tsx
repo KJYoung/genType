@@ -7,7 +7,7 @@ import * as TypeRepertoire from "./TypeRepertoire";
 // tslint:disable-next-line:no-console
 const consoleLog = console.log;
 
-consoleLog("index.tsx roundedNumber:", ImportJsValue.roundedNumber);
+consoleLog("index.tsx funcInt2IntRet:", ImportJsValue.funcInt2IntRet);
 consoleLog(
   "index.tsx returnedFromHigherOrder:",
   ImportJsValue.returnedFromHigherOrder

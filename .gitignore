@@ -23,3 +23,5 @@ dist/LICENSE
 dist/package.json
 examples/typescript-react-example/.eslintcache
 result
+
+*.temp.txt

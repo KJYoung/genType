@@ -1,8 +1,5 @@
 /* @flow strict */
 /************************************************************ 'Type Repertoire' ************************************************************/ 
-export const round: (_: number) => number = Math.round;
-// export const round: (number) = 3;
-
 // Type Adaptors
 export type numberOrString = number | string;
 export type numberOrStringOrNull = number | string | null;
@@ -12,7 +9,15 @@ export type complexUnion = number[] | string | ((x : number) => number) | null |
 export const integerValue = 3;                // number
 export const floatValue = 3.4;                // number
 export const binaryValue = 0b1010;            // number
+export const calValue = 3 + 4;                // number
+export const calValue2 = 3 * 4 + 3 - 2;       // number
+export const calValue3 = calValue2 + 2;       // number
+export const calConversion = "33" + 2;        // string
 export const booleanValue = false;            // boolean
+export const booleanValue2 = true;            // boolean
+export const booleanValue3 = true || false;   // boolean
+export const booleanValue4 = true ? 3 : 22;   // number
+export const integerValueFromVar = integerValue;  // number
 export const stringValue = "string";          // string
 
 // Basic Structure Literals ************************************************************
@@ -68,12 +73,6 @@ interface interface1 {
 export const interfaceInstance : interface1 = {
   title : 'hi'
 };
-
-// tslint:disable-next-line:only-arrow-functions
-export const area = function(point: { x: number; y?: number }): number {
-  return point.x * (point.y === undefined ? 1 : point.y);
-};
-
 
 
 export const returnMixedArray = function() : Array<number | string> {
