@@ -3,6 +3,10 @@
 export const round: (_: number) => number = Math.round;
 // export const round: (number) = 3;
 
+// Type Adaptors
+export type numberOrString = number | string;
+export type numberOrStringOrNull = number | string | null;
+export type complexUnion = number[] | string | ((x : number) => number) | null | undefined;
 
 // Basic Type Literals ************************************************************
 export const integerValue = 3;                // number
@@ -22,8 +26,8 @@ export const intstrTuple = [3, "hello"];                    // (string | number)
 export const intstrTuple2: [number, string] = [3, "hello"]; // [number, string]
 
 // enum
-export enum Color { Red, Green, Blue };                     // enum Color
-export const enumValue = Color.Green;                       // Color.Green
+export enum colorEnum { Red, Green, Blue };                     // enum Color
+export const enumValue = colorEnum.Green;                       // Color.Green
 
 // objects
 type pointOptional = { x: number; y?: number };
@@ -31,7 +35,7 @@ type pointRequired = { x: number; y: number };
 export const objectSimple = { x : 3, y : 7};                // equivalent to pointRequired
 export const objectComplex = { object : objectSimple, deep : { deepdeep : { object1 : objectSimple }}, id : 2}; // complex object
 
-// function
+// functions
 export const funcInt2Int = function(num: number): number {  // number => number
   return 1;
 }
@@ -70,7 +74,7 @@ export const area = function(point: { x: number; y?: number }): number {
   return point.x * (point.y === undefined ? 1 : point.y);
 };
 
-export type numberOrString = number | string;
+
 
 export const returnMixedArray = function() : Array<number | string> {
   return [1,2];

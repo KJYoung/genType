@@ -1,14 +1,13 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import App from "./App";
-import * as ImportJsValue from "./ImportJsValue.gen";
+import * as ImportJsValue from "./ImportTsValue.gen";
 import * as TypeRepertoire from "./TypeRepertoire";
 
 // tslint:disable-next-line:no-console
 const consoleLog = console.log;
 
 consoleLog("index.tsx roundedNumber:", ImportJsValue.roundedNumber);
-consoleLog("index.tsx areaValue:", ImportJsValue.areaValue);
 consoleLog(
   "index.tsx returnedFromHigherOrder:",
   ImportJsValue.returnedFromHigherOrder
