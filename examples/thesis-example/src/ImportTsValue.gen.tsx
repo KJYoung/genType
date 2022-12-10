@@ -245,7 +245,7 @@ export const opValue32TypeChecked: string = opValue32NotChecked;
 export const opValue32: unknown = opValue32TypeChecked as string;
 
 // In case of type error, check the type of 'integerValueFromVar' in 'ImportTsValue.re' and './TypeBasics'.
-/* integerValueFromVar | TS: [Undefined] | RES: [number] */
+/* integerValueFromVar | TS: [number] | RES: [number] */
 export const integerValueFromVarTypeChecked: number = integerValueFromVarNotChecked;
 
 // Export 'integerValueFromVar' early to allow circular import from the '.bs.js' file.
