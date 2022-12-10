@@ -280,7 +280,7 @@ export const opValue32TypeChecked: string = opValue32NotChecked;
 export const opValue32: unknown = opValue32TypeChecked as string;
 
 // In case of type error, check the type of 'opValue33' in 'ImportTsValue.re' and './TypeBasics'.
-/* opValue33 | TS: [number] | RES: [string] */
+/* opValue33 | TS: [string] | RES: [string] */
 export const opValue33TypeChecked: string = opValue33NotChecked;
 
 // Export 'opValue33' early to allow circular import from the '.bs.js' file.
