@@ -30,6 +30,9 @@ export const objectComplex = { object : objectSimple, deep : { deepdeep : { obje
 export const funcInt2Int = function(num: number): number {  // number => number
   return 1;
 }
+export const funcInt2IntImplicit = function(num : number) {
+  return num + 1;
+}
 export const funcStr2Array = function(str: string): number[] {  // string => number[]
   return [1, 2, 3];
 }
