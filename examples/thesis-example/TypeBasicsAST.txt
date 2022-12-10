@@ -1777,3 +1777,65 @@
     }
   }
 }
+<ref *2> NodeObject {
+  pos: 1735,
+  end: 1787,
+  flags: 0,
+  modifierFlagsCache: 0,
+  transformFlags: 0,
+  parent: <ref *1> NodeObject {
+    pos: 1729,
+    end: 1787,
+    flags: 2,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: NodeObject {
+      pos: 1722,
+      end: 1788,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [SourceFileObject],
+      kind: 225,
+      decorators: undefined,
+      modifiers: [Array],
+      declarationList: [Circular *1]
+    },
+    kind: 243,
+    declarations: [ [Circular *2], pos: 1735, end: 1787 ],
+    _children: [ [TokenObject], [NodeObject] ]
+  },
+  kind: 242,
+  name: IdentifierObject {
+    pos: 1735,
+    end: 1750,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 75,
+    escapedText: 'instanceofTest'
+  },
+  type: undefined,
+  initializer: <ref *3> NodeObject {
+    pos: 1752,
+    end: 1787,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 200,
+    expression: NodeObject {
+      pos: 1754,
+      end: 1786,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 209,
+      left: [NodeObject],
+      operatorToken: [TokenObject],
+      right: [IdentifierObject]
+    }
+  }
+}

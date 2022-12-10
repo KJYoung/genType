@@ -64,6 +64,8 @@ external integerValueFromVar: int = "integerValueFromVar"
 external integerValueFromVarParen: int = "integerValueFromVarParen"
 @genType.import("./TypeBasics")
 external typeofInteger: string = "typeofInteger"
+@genType.import("./TypeBasics")
+external instanceofTest: bool = "instanceofTest"
 
 // Basic Structure Literals ************************************************************
 // list

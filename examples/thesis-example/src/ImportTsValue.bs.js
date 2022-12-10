@@ -55,6 +55,8 @@ var integerValueFromVarParen = ImportTsValueGen$1.integerValueFromVarParen;
 
 var typeofInteger = ImportTsValueGen$1.typeofInteger;
 
+var instanceofTest = ImportTsValueGen$1.instanceofTest;
+
 var integerList = ImportTsValueGen$1.integerList;
 
 var integerList2 = ImportTsValueGen$1.integerList2;
@@ -158,6 +160,7 @@ export {
   integerValueFromVar ,
   integerValueFromVarParen ,
   typeofInteger ,
+  instanceofTest ,
   integerList ,
   integerList2 ,
   integerList3 ,

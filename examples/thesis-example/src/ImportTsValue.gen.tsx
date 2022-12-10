@@ -54,6 +54,8 @@ import {integerValueFromVarParen as integerValueFromVarParenNotChecked} from './
 
 import {typeofInteger as typeofIntegerNotChecked} from './TypeBasics';
 
+import {instanceofTest as instanceofTestNotChecked} from './TypeBasics';
+
 import {integerList as integerListNotChecked} from './TypeRepertoire';
 
 import {integerList2 as integerList2NotChecked} from './TypeRepertoire';
@@ -277,6 +279,13 @@ export const typeofIntegerTypeChecked: string = typeofIntegerNotChecked;
 
 // Export 'typeofInteger' early to allow circular import from the '.bs.js' file.
 export const typeofInteger: unknown = typeofIntegerTypeChecked as string;
+
+// In case of type error, check the type of 'instanceofTest' in 'ImportTsValue.re' and './TypeBasics'.
+/* instanceofTest | TS: [boolean] | RES: [boolean] */
+export const instanceofTestTypeChecked: boolean = instanceofTestNotChecked;
+
+// Export 'instanceofTest' early to allow circular import from the '.bs.js' file.
+export const instanceofTest: unknown = instanceofTestTypeChecked as boolean;
 
 // In case of type error, check the type of 'integerList' in 'ImportTsValue.re' and './TypeRepertoire'.
 /* integerList | TS: [Undefined 192] | RES: [number[]] */

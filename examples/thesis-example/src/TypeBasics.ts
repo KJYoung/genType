@@ -35,3 +35,8 @@ export const opValue33 = ("33") + (3);         // string
 export const integerValueFromVar = integerValue;  // number
 export const integerValueFromVarParen = (integerValue); // number
 export const typeofInteger = typeof(3); // string
+
+class Bar {
+
+}
+export const instanceofTest = ({name2 : "James"} instanceof Bar);
