@@ -46,7 +46,13 @@ import {opValue31 as opValue31NotChecked} from './TypeBasics';
 
 import {opValue32 as opValue32NotChecked} from './TypeBasics';
 
+import {opValue33 as opValue33NotChecked} from './TypeBasics';
+
 import {integerValueFromVar as integerValueFromVarNotChecked} from './TypeBasics';
+
+import {integerValueFromVarParen as integerValueFromVarParenNotChecked} from './TypeBasics';
+
+import {typeofInteger as typeofIntegerNotChecked} from './TypeBasics';
 
 import {integerList as integerListNotChecked} from './TypeRepertoire';
 
@@ -224,7 +230,7 @@ export const opValue22TypeChecked: boolean = opValue22NotChecked;
 export const opValue22: unknown = opValue22TypeChecked as boolean;
 
 // In case of type error, check the type of 'opValue23' in 'ImportTsValue.re' and './TypeBasics'.
-/* opValue23 | TS: [Undefined] | RES: [number] */
+/* opValue23 | TS: [Undefined 210] | RES: [number] */
 export const opValue23TypeChecked: number = opValue23NotChecked;
 
 // Export 'opValue23' early to allow circular import from the '.bs.js' file.
@@ -244,6 +250,13 @@ export const opValue32TypeChecked: string = opValue32NotChecked;
 // Export 'opValue32' early to allow circular import from the '.bs.js' file.
 export const opValue32: unknown = opValue32TypeChecked as string;
 
+// In case of type error, check the type of 'opValue33' in 'ImportTsValue.re' and './TypeBasics'.
+/* opValue33 | TS: [number] | RES: [string] */
+export const opValue33TypeChecked: string = opValue33NotChecked;
+
+// Export 'opValue33' early to allow circular import from the '.bs.js' file.
+export const opValue33: unknown = opValue33TypeChecked as string;
+
 // In case of type error, check the type of 'integerValueFromVar' in 'ImportTsValue.re' and './TypeBasics'.
 /* integerValueFromVar | TS: [number] | RES: [number] */
 export const integerValueFromVarTypeChecked: number = integerValueFromVarNotChecked;
@@ -251,78 +264,92 @@ export const integerValueFromVarTypeChecked: number = integerValueFromVarNotChec
 // Export 'integerValueFromVar' early to allow circular import from the '.bs.js' file.
 export const integerValueFromVar: unknown = integerValueFromVarTypeChecked as number;
 
+// In case of type error, check the type of 'integerValueFromVarParen' in 'ImportTsValue.re' and './TypeBasics'.
+/* integerValueFromVarParen | TS: [number] | RES: [number] */
+export const integerValueFromVarParenTypeChecked: number = integerValueFromVarParenNotChecked;
+
+// Export 'integerValueFromVarParen' early to allow circular import from the '.bs.js' file.
+export const integerValueFromVarParen: unknown = integerValueFromVarParenTypeChecked as number;
+
+// In case of type error, check the type of 'typeofInteger' in 'ImportTsValue.re' and './TypeBasics'.
+/* typeofInteger | TS: [string] | RES: [string] */
+export const typeofIntegerTypeChecked: string = typeofIntegerNotChecked;
+
+// Export 'typeofInteger' early to allow circular import from the '.bs.js' file.
+export const typeofInteger: unknown = typeofIntegerTypeChecked as string;
+
 // In case of type error, check the type of 'integerList' in 'ImportTsValue.re' and './TypeRepertoire'.
-/* integerList | TS: [Undefined] | RES: [number[]] */
+/* integerList | TS: [Undefined 192] | RES: [number[]] */
 export const integerListTypeChecked: number[] = integerListNotChecked;
 
 // Export 'integerList' early to allow circular import from the '.bs.js' file.
 export const integerList: unknown = integerListTypeChecked as number[];
 
 // In case of type error, check the type of 'integerList2' in 'ImportTsValue.re' and './TypeRepertoire'.
-/* integerList2 | TS: [number[]] | RES: [number[]] */
+/* integerList2 | TS: [Undefined 192] | RES: [number[]] */
 export const integerList2TypeChecked: number[] = integerList2NotChecked;
 
 // Export 'integerList2' early to allow circular import from the '.bs.js' file.
 export const integerList2: unknown = integerList2TypeChecked as number[];
 
 // In case of type error, check the type of 'integerList3' in 'ImportTsValue.re' and './TypeRepertoire'.
-/* integerList3 | TS: [Array<number>] | RES: [number[]] */
+/* integerList3 | TS: [Undefined 192] | RES: [number[]] */
 export const integerList3TypeChecked: number[] = integerList3NotChecked;
 
 // Export 'integerList3' early to allow circular import from the '.bs.js' file.
 export const integerList3: unknown = integerList3TypeChecked as number[];
 
 // In case of type error, check the type of 'intstrTuple' in 'ImportTsValue.re' and './TypeRepertoire'.
-/* intstrTuple | TS: [Undefined] | RES: [numberOrString[]] */
+/* intstrTuple | TS: [Undefined 192] | RES: [numberOrString[]] */
 export const intstrTupleTypeChecked: numberOrString[] = intstrTupleNotChecked;
 
 // Export 'intstrTuple' early to allow circular import from the '.bs.js' file.
 export const intstrTuple: unknown = intstrTupleTypeChecked as numberOrString[];
 
 // In case of type error, check the type of 'intstrTuple2' in 'ImportTsValue.re' and './TypeRepertoire'.
-/* intstrTuple2 | TS: [[number, string]] | RES: [[number, string]] */
+/* intstrTuple2 | TS: [Undefined 192] | RES: [[number, string]] */
 export const intstrTuple2TypeChecked: [number, string] = intstrTuple2NotChecked;
 
 // Export 'intstrTuple2' early to allow circular import from the '.bs.js' file.
 export const intstrTuple2: unknown = intstrTuple2TypeChecked as [number, string];
 
 // In case of type error, check the type of 'enumValue' in 'ImportTsValue.re' and './TypeRepertoire'.
-/* enumValue | TS: [Undefined] | RES: [number] */
+/* enumValue | TS: [Undefined 194] | RES: [number] */
 export const enumValueTypeChecked: number = enumValueNotChecked;
 
 // Export 'enumValue' early to allow circular import from the '.bs.js' file.
 export const enumValue: unknown = enumValueTypeChecked as number;
 
 // In case of type error, check the type of 'objectSimple' in 'ImportTsValue.re' and './TypeRepertoire'.
-/* objectSimple | TS: [Undefined] | RES: [pointRequired_rescript] */
+/* objectSimple | TS: [Undefined 193] | RES: [pointRequired_rescript] */
 export const objectSimpleTypeChecked: pointRequired_rescript = objectSimpleNotChecked;
 
 // Export 'objectSimple' early to allow circular import from the '.bs.js' file.
 export const objectSimple: unknown = objectSimpleTypeChecked as pointRequired_rescript;
 
 // In case of type error, check the type of 'objectComplex' in 'ImportTsValue.re' and './TypeRepertoire'.
-/* objectComplex | TS: [Undefined] | RES: [objectComplexT] */
+/* objectComplex | TS: [Undefined 193] | RES: [objectComplexT] */
 export const objectComplexTypeChecked: objectComplexT = objectComplexNotChecked;
 
 // Export 'objectComplex' early to allow circular import from the '.bs.js' file.
 export const objectComplex: unknown = objectComplexTypeChecked as objectComplexT;
 
 // In case of type error, check the type of 'funcInt2Int' in 'ImportTsValue.re' and './TypeRepertoire'.
-/* funcInt2Int | TS: [number] | RES: [(_1:number) => number] */
+/* funcInt2Int | TS: [Undefined 201] | RES: [(_1:number) => number] */
 export const funcInt2IntTypeChecked: (_1:number) => number = funcInt2IntNotChecked;
 
 // Export 'funcInt2Int' early to allow circular import from the '.bs.js' file.
 export const funcInt2Int: unknown = funcInt2IntTypeChecked as (_1:number) => number;
 
 // In case of type error, check the type of 'funcStr2Array' in 'ImportTsValue.re' and './TypeRepertoire'.
-/* funcStr2Array | TS: [number[]] | RES: [(_1:string) => number[]] */
+/* funcStr2Array | TS: [Undefined 201] | RES: [(_1:string) => number[]] */
 export const funcStr2ArrayTypeChecked: (_1:string) => number[] = funcStr2ArrayNotChecked;
 
 // Export 'funcStr2Array' early to allow circular import from the '.bs.js' file.
 export const funcStr2Array: unknown = funcStr2ArrayTypeChecked as (_1:string) => number[];
 
 // In case of type error, check the type of 'funcPoint2Point' in 'ImportTsValue.re' and './TypeRepertoire'.
-/* funcPoint2Point | TS: [pointRequired] | RES: [(_1:pointOptional_rescript) => pointRequired_rescript] */
+/* funcPoint2Point | TS: [Undefined 201] | RES: [(_1:pointOptional_rescript) => pointRequired_rescript] */
 export const funcPoint2PointTypeChecked: (_1:pointOptional_rescript) => pointRequired_rescript = funcPoint2PointNotChecked;
 
 // Export 'funcPoint2Point' early to allow circular import from the '.bs.js' file.
@@ -343,14 +370,14 @@ export const unionsTypeChecked: complexUnion = unionsNotChecked;
 export const unions: unknown = unionsTypeChecked as complexUnion;
 
 // In case of type error, check the type of 'returnMixedArray' in 'ImportTsValue.re' and './TypeRepertoire'.
-/* returnMixedArray | TS: [Array<number | string>] | RES: [() => numberOrString[]] */
+/* returnMixedArray | TS: [Undefined 201] | RES: [() => numberOrString[]] */
 export const returnMixedArrayTypeChecked: () => numberOrString[] = returnMixedArrayNotChecked;
 
 // Export 'returnMixedArray' early to allow circular import from the '.bs.js' file.
 export const returnMixedArray: unknown = returnMixedArrayTypeChecked as () => numberOrString[];
 
 // In case of type error, check the type of 'useColor' in 'ImportTsValue.re' and './TypeRepertoire'.
-/* useColor | TS: [number] | RES: [(_1:color) => number] */
+/* useColor | TS: [Undefined 201] | RES: [(_1:color) => number] */
 export const useColorTypeChecked: (_1:color) => number = useColorNotChecked;
 
 // Export 'useColor' early to allow circular import from the '.bs.js' file.

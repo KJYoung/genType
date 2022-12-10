@@ -54,10 +54,16 @@ external opValue23: int = "opValue23"
 external opValue31: string = "opValue31"
 @genType.import("./TypeBasics")
 external opValue32: string = "opValue32"
+@genType.import("./TypeBasics")
+external opValue33: string = "opValue33"
 
 // variable assignment (number)
 @genType.import("./TypeBasics")
 external integerValueFromVar: int = "integerValueFromVar"
+@genType.import("./TypeBasics")
+external integerValueFromVarParen: int = "integerValueFromVarParen"
+@genType.import("./TypeBasics")
+external typeofInteger: string = "typeofInteger"
 
 // Basic Structure Literals ************************************************************
 // list

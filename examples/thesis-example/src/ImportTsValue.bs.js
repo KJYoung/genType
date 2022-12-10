@@ -47,7 +47,13 @@ var opValue31 = ImportTsValueGen$1.opValue31;
 
 var opValue32 = ImportTsValueGen$1.opValue32;
 
+var opValue33 = ImportTsValueGen$1.opValue33;
+
 var integerValueFromVar = ImportTsValueGen$1.integerValueFromVar;
+
+var integerValueFromVarParen = ImportTsValueGen$1.integerValueFromVarParen;
+
+var typeofInteger = ImportTsValueGen$1.typeofInteger;
 
 var integerList = ImportTsValueGen$1.integerList;
 
@@ -148,7 +154,10 @@ export {
   opValue23 ,
   opValue31 ,
   opValue32 ,
+  opValue33 ,
   integerValueFromVar ,
+  integerValueFromVarParen ,
+  typeofInteger ,
   integerList ,
   integerList2 ,
   integerList3 ,

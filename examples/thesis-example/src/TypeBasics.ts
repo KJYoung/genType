@@ -30,6 +30,8 @@ export const opValue23 = true ? 3 : opValue2;  // number
 // any => string
 export const opValue31 = "33" + 2;             // string
 export const opValue32 = 2 + ( 3 + ( true + ( "string" + 3)))  // string!
-
+export const opValue33 = ("33") + (3);         // string
 
 export const integerValueFromVar = integerValue;  // number
+export const integerValueFromVarParen = (integerValue); // number
+export const typeofInteger = typeof(3); // string

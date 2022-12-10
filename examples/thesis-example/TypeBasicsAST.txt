@@ -446,7 +446,6 @@
     }
   }
 }
-Maybe StringConcat?
 <ref *2> NodeObject {
   pos: 585,
   end: 618,
@@ -529,7 +528,6 @@ Maybe StringConcat?
     }
   }
 }
-Maybe StringConcat?
 <ref *2> NodeObject {
   pos: 645,
   end: 667,
@@ -671,7 +669,6 @@ Maybe StringConcat?
     }
   }
 }
-Maybe StringConcat?
 <ref *2> NodeObject {
   pos: 757,
   end: 774,
@@ -1531,20 +1528,20 @@ Maybe StringConcat?
   }
 }
 <ref *2> NodeObject {
-  pos: 1487,
-  end: 1522,
+  pos: 1485,
+  end: 1510,
   flags: 0,
   modifierFlagsCache: 0,
   transformFlags: 0,
   parent: <ref *1> NodeObject {
-    pos: 1481,
-    end: 1522,
+    pos: 1479,
+    end: 1510,
     flags: 2,
     modifierFlagsCache: 0,
     transformFlags: 0,
     parent: NodeObject {
       pos: 1460,
-      end: 1523,
+      end: 1511,
       flags: 0,
       modifierFlagsCache: 0,
       transformFlags: 0,
@@ -1555,13 +1552,92 @@ Maybe StringConcat?
       declarationList: [Circular *1]
     },
     kind: 243,
-    declarations: [ [Circular *2], pos: 1487, end: 1522 ],
+    declarations: [ [Circular *2], pos: 1485, end: 1510 ],
     _children: [ [TokenObject], [NodeObject] ]
   },
   kind: 242,
   name: IdentifierObject {
-    pos: 1487,
-    end: 1507,
+    pos: 1485,
+    end: 1495,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 75,
+    escapedText: 'opValue33'
+  },
+  type: undefined,
+  initializer: <ref *3> NodeObject {
+    pos: 1497,
+    end: 1510,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 209,
+    left: NodeObject {
+      pos: 1497,
+      end: 1504,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 200,
+      expression: [TokenObject]
+    },
+    operatorToken: TokenObject {
+      pos: 1504,
+      end: 1506,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 39
+    },
+    right: NodeObject {
+      pos: 1506,
+      end: 1510,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 200,
+      expression: [TokenObject]
+    }
+  }
+}
+<ref *2> NodeObject {
+  pos: 1543,
+  end: 1578,
+  flags: 0,
+  modifierFlagsCache: 0,
+  transformFlags: 0,
+  parent: <ref *1> NodeObject {
+    pos: 1537,
+    end: 1578,
+    flags: 2,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: NodeObject {
+      pos: 1511,
+      end: 1579,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [SourceFileObject],
+      kind: 225,
+      decorators: undefined,
+      modifiers: [Array],
+      declarationList: [Circular *1]
+    },
+    kind: 243,
+    declarations: [ [Circular *2], pos: 1543, end: 1578 ],
+    _children: [ [TokenObject], [NodeObject] ]
+  },
+  kind: 242,
+  name: IdentifierObject {
+    pos: 1543,
+    end: 1563,
     flags: 0,
     modifierFlagsCache: 0,
     transformFlags: 0,
@@ -1571,13 +1647,133 @@ Maybe StringConcat?
   },
   type: undefined,
   initializer: IdentifierObject {
-    pos: 1509,
-    end: 1522,
+    pos: 1565,
+    end: 1578,
     flags: 0,
     modifierFlagsCache: 0,
     transformFlags: 0,
     parent: [Circular *2],
     kind: 75,
     escapedText: 'integerValue'
+  }
+}
+<ref *2> NodeObject {
+  pos: 1603,
+  end: 1645,
+  flags: 0,
+  modifierFlagsCache: 0,
+  transformFlags: 0,
+  parent: <ref *1> NodeObject {
+    pos: 1597,
+    end: 1645,
+    flags: 2,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: NodeObject {
+      pos: 1579,
+      end: 1646,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [SourceFileObject],
+      kind: 225,
+      decorators: undefined,
+      modifiers: [Array],
+      declarationList: [Circular *1]
+    },
+    kind: 243,
+    declarations: [ [Circular *2], pos: 1603, end: 1645 ],
+    _children: [ [TokenObject], [NodeObject] ]
+  },
+  kind: 242,
+  name: IdentifierObject {
+    pos: 1603,
+    end: 1628,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 75,
+    escapedText: 'integerValueFromVarParen'
+  },
+  type: undefined,
+  initializer: <ref *3> NodeObject {
+    pos: 1630,
+    end: 1645,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 200,
+    expression: IdentifierObject {
+      pos: 1632,
+      end: 1644,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 75,
+      escapedText: 'integerValue'
+    }
+  }
+}
+<ref *2> NodeObject {
+  pos: 1669,
+  end: 1695,
+  flags: 0,
+  modifierFlagsCache: 0,
+  transformFlags: 0,
+  parent: <ref *1> NodeObject {
+    pos: 1663,
+    end: 1695,
+    flags: 2,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: NodeObject {
+      pos: 1646,
+      end: 1696,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [SourceFileObject],
+      kind: 225,
+      decorators: undefined,
+      modifiers: [Array],
+      declarationList: [Circular *1]
+    },
+    kind: 243,
+    declarations: [ [Circular *2], pos: 1669, end: 1695 ],
+    _children: [ [TokenObject], [NodeObject] ]
+  },
+  kind: 242,
+  name: IdentifierObject {
+    pos: 1669,
+    end: 1683,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 75,
+    escapedText: 'typeofInteger'
+  },
+  type: undefined,
+  initializer: <ref *3> NodeObject {
+    pos: 1685,
+    end: 1695,
+    flags: 0,
+    modifierFlagsCache: 0,
+    transformFlags: 0,
+    parent: [Circular *2],
+    kind: 204,
+    expression: NodeObject {
+      pos: 1692,
+      end: 1695,
+      flags: 0,
+      modifierFlagsCache: 0,
+      transformFlags: 0,
+      parent: [Circular *3],
+      kind: 200,
+      expression: [TokenObject]
+    }
   }
 }
