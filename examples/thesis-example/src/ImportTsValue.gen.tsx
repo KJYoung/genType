@@ -189,7 +189,7 @@ export const opValue7TypeChecked: number = opValue7NotChecked;
 export const opValue7: unknown = opValue7TypeChecked as number;
 
 // In case of type error, check the type of 'opValue8' in 'ImportTsValue.re' and './TypeBasics'.
-/* opValue8 | TS: [Undefined] | RES: [number] */
+/* opValue8 | TS: [number] | RES: [number] */
 export const opValue8TypeChecked: number = opValue8NotChecked;
 
 // Export 'opValue8' early to allow circular import from the '.bs.js' file.
