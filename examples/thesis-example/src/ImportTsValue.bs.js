@@ -13,6 +13,8 @@ var booleanValue = ImportTsValueGen$1.booleanValue;
 
 var booleanValue2 = ImportTsValueGen$1.booleanValue2;
 
+var booleanValue3 = ImportTsValueGen$1.booleanValue3;
+
 var stringValue = ImportTsValueGen$1.stringValue;
 
 var opValue1 = ImportTsValueGen$1.opValue1;
@@ -129,6 +131,7 @@ export {
   binaryValue ,
   booleanValue ,
   booleanValue2 ,
+  booleanValue3 ,
   stringValue ,
   opValue1 ,
   opValue2 ,

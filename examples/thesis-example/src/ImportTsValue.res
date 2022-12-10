@@ -13,6 +13,8 @@ external booleanValue: bool = "booleanValue"
 @genType.import("./TypeBasics")
 external booleanValue2: bool = "booleanValue2"
 @genType.import("./TypeBasics")
+external booleanValue3: bool = "booleanValue3"
+@genType.import("./TypeBasics")
 external stringValue: string = "stringValue"
 
 // number => number operations
