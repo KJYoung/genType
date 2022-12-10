@@ -8,6 +8,7 @@ export type complexUnion = number[] | string | ((x : number) => number) | null |
 // Basic Structure Literals ************************************************************
 // list
 export const integerList = [1, 2, 3];                       // number[]
+export const complexList = [1, "s", false];                        // (string | number | boolean)[]
 export const integerList2 : number[] = [1, 2, 3];           // number[]
 export const integerList3 : Array<number> = [1, 2, 3];      // number[], Array<number> : same thing.
 

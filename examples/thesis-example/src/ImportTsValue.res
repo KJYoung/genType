@@ -84,6 +84,9 @@ external integerList2: array<int>  = "integerList2"
 @genType.import("./TypeRepertoire")
 external integerList3: array<int>  = "integerList3"
 
+@genType.import("./TypeRepertoire")
+external complexList: unknown  = "complexList"
+
 // tuple
 @genType.import("./TypeRepertoire")
 type numberOrString

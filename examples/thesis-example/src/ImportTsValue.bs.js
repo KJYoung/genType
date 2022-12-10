@@ -69,6 +69,8 @@ var integerList2 = ImportTsValueGen$1.integerList2;
 
 var integerList3 = ImportTsValueGen$1.integerList3;
 
+var complexList = ImportTsValueGen$1.complexList;
+
 var intstrTuple = ImportTsValueGen$1.intstrTuple;
 
 var intstrTuple2 = ImportTsValueGen$1.intstrTuple2;
@@ -173,6 +175,7 @@ export {
   integerList ,
   integerList2 ,
   integerList3 ,
+  complexList ,
   intstrTuple ,
   intstrTuple2 ,
   enumValue ,
