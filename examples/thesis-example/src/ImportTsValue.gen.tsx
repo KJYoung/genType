@@ -42,6 +42,12 @@ import {opValue22 as opValue22NotChecked} from './TypeBasics';
 
 import {opValue23 as opValue23NotChecked} from './TypeBasics';
 
+import {opValue24 as opValue24NotChecked} from './TypeBasics';
+
+import {opValue25 as opValue25NotChecked} from './TypeBasics';
+
+import {opValue27 as opValue27NotChecked} from './TypeBasics';
+
 import {opValue31 as opValue31NotChecked} from './TypeBasics';
 
 import {opValue32 as opValue32NotChecked} from './TypeBasics';
@@ -218,25 +224,46 @@ export const opValue12TypeChecked: boolean = opValue12NotChecked;
 export const opValue12: unknown = opValue12TypeChecked as boolean;
 
 // In case of type error, check the type of 'opValue21' in 'ImportTsValue.re' and './TypeBasics'.
-/* opValue21 | TS: [Go deeper] | RES: [boolean] */
+/* opValue21 | TS: [boolean] | RES: [boolean] */
 export const opValue21TypeChecked: boolean = opValue21NotChecked;
 
 // Export 'opValue21' early to allow circular import from the '.bs.js' file.
 export const opValue21: unknown = opValue21TypeChecked as boolean;
 
 // In case of type error, check the type of 'opValue22' in 'ImportTsValue.re' and './TypeBasics'.
-/* opValue22 | TS: [Go deeper] | RES: [boolean] */
+/* opValue22 | TS: [boolean] | RES: [boolean] */
 export const opValue22TypeChecked: boolean = opValue22NotChecked;
 
 // Export 'opValue22' early to allow circular import from the '.bs.js' file.
 export const opValue22: unknown = opValue22TypeChecked as boolean;
 
 // In case of type error, check the type of 'opValue23' in 'ImportTsValue.re' and './TypeBasics'.
-/* opValue23 | TS: [Undefined 210] | RES: [number] */
+/* opValue23 | TS: [number] | RES: [number] */
 export const opValue23TypeChecked: number = opValue23NotChecked;
 
 // Export 'opValue23' early to allow circular import from the '.bs.js' file.
 export const opValue23: unknown = opValue23TypeChecked as number;
+
+// In case of type error, check the type of 'opValue24' in 'ImportTsValue.re' and './TypeBasics'.
+/* opValue24 | TS: [number] | RES: [number] */
+export const opValue24TypeChecked: number = opValue24NotChecked;
+
+// Export 'opValue24' early to allow circular import from the '.bs.js' file.
+export const opValue24: unknown = opValue24TypeChecked as number;
+
+// In case of type error, check the type of 'opValue25' in 'ImportTsValue.re' and './TypeBasics'.
+/* opValue25 | TS: [string] | RES: [string] */
+export const opValue25TypeChecked: string = opValue25NotChecked;
+
+// Export 'opValue25' early to allow circular import from the '.bs.js' file.
+export const opValue25: unknown = opValue25TypeChecked as string;
+
+// In case of type error, check the type of 'opValue27' in 'ImportTsValue.re' and './TypeBasics'.
+/* opValue27 | TS: [number | boolean] | RES: [unknown] */
+export const opValue27TypeChecked: unknown = opValue27NotChecked;
+
+// Export 'opValue27' early to allow circular import from the '.bs.js' file.
+export const opValue27: unknown = opValue27TypeChecked as unknown;
 
 // In case of type error, check the type of 'opValue31' in 'ImportTsValue.re' and './TypeBasics'.
 /* opValue31 | TS: [string] | RES: [string] */

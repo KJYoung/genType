@@ -10,7 +10,7 @@ export const stringValue = "string";          // string
 
 // number => number
 export const opValue1 = 3 + 4;                // number
-export let   opValue2 = 3 + (4 * 3) / 3 % 2;    // number
+export let   opValue2 = 3 + (4 * 3) / 3 % 2;  // number
 export const opValue3 = opValue2++;           // number
 export const opValue4 = opValue2 + 2;         // number
 export const opValue5 = 3 | 3;                // number
@@ -23,9 +23,19 @@ export const opValue11 = opValue1 > opValue2;  // boolean
 export const opValue12 = 3 <= 2;               // boolean
 
 // boolean => boolean(or number)
-export const opValue21 = true && false;        // boolean
-export const opValue22 = true || false;        // boolean
+export const opValue21 = false && false;       // boolean
+export const opValue22 = true || "string";     // boolean
 export const opValue23 = true ? 3 : opValue2;  // number
+export const opValue24 = true && 3.4;          // number
+export const opValue25 = false || "string"     // string
+export const opValue26 = false && 3.4;         // boolean
+export const opValue27 = (integerValue < 33) && integerValue; // boolean | number
+
+export const varBoolean = (integerValue < 33);
+export const opValue27_2 = varBoolean && integerValue; // boolean | number
+export const opValue23_2 = varBoolean ? true : 3; // boolean | number
+export const opValue23_3 = varBoolean && integerValue; // boolean | number
+
 
 // any => string
 export const opValue31 = "33" + 2;             // string

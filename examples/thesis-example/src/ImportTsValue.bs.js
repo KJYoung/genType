@@ -43,6 +43,12 @@ var opValue22 = ImportTsValueGen$1.opValue22;
 
 var opValue23 = ImportTsValueGen$1.opValue23;
 
+var opValue24 = ImportTsValueGen$1.opValue24;
+
+var opValue25 = ImportTsValueGen$1.opValue25;
+
+var opValue27 = ImportTsValueGen$1.opValue27;
+
 var opValue31 = ImportTsValueGen$1.opValue31;
 
 var opValue32 = ImportTsValueGen$1.opValue32;
@@ -154,6 +160,9 @@ export {
   opValue21 ,
   opValue22 ,
   opValue23 ,
+  opValue24 ,
+  opValue25 ,
+  opValue27 ,
   opValue31 ,
   opValue32 ,
   opValue33 ,

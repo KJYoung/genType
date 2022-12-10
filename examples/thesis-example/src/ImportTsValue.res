@@ -48,6 +48,12 @@ external opValue21: bool = "opValue21"
 external opValue22: bool = "opValue22"
 @genType.import("./TypeBasics")
 external opValue23: int = "opValue23"
+@genType.import("./TypeBasics")
+external opValue24: float = "opValue24"
+@genType.import("./TypeBasics")
+external opValue25: string = "opValue25"
+@genType.import("./TypeBasics")
+external opValue27: unknown = "opValue27"
 
 // any => string operations
 @genType.import("./TypeBasics")
