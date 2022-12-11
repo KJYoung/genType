@@ -223,14 +223,27 @@ let rec emitCodeItem ~config ~emitters ~moduleItemsEmitter ~env ~fileName
             ""
       end in
       let typeRes = (type_ |> EmitType.typeToString ~config ~typeNameIsInterface) in
+      let _ = 
+        (* typeTS, typeRes comparison *)
+        if String.equal typeTS typeRes then
+          ()
+        else begin
+          let _ = 
+            if String.equal typeRes "unknown" then begin
+            (print_endline ("[WARNING] (TS)" ^ typeTS ^ " and type annotation is unknown in Rescript!"))
+            end else begin
+              (* Something Complicated String Parsing Logic Goes Here *)
+              (print_endline ("[ERROR] (TS)" ^ typeTS ^ " and (Res)" ^ typeRes ^ " may not be matched!"))
+            end
+          in 
+            ()
+        end
+      in
       let typeComment = typeCommentHeader ^ typeTS ^ ("]" ^ " | RES: [" ^ typeRes ^ "] */")  in
         (typeComment)
     end
     | _ -> "") in
-    let _ = 
-      (* typeTS, typeRes comparison *)
-     ()
-    in
+    
     (* let _ = print_endline ("IMPORT PATH : " ^ importFile) in (* MyMath *) *)
     (* let _ = print_endline ("IMPORT PATH : " ^ importFileVariable) in (* $$MyMath *) *)
     (* let _ = print_endline ("IMPORT PATH : " ^ importedAsName) in roundNotChecked *)

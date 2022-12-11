@@ -142,7 +142,7 @@ let tsparser =
             let found = false;
             parsed.declarations.forEach(declaration => {
                 if(declaration.name === val){
-                    console.log(`${val}'s declaration type is : ${declaration.type}`);
+                    // console.log(`${val} declaration type is : ${declaration.type}`);
                     fs.writeFile(`${val}.temp.txt`, declaration.type ? declaration.type : \"Complicated or Undefined\", (err) => {
                         // In case of a error throw err.
                         if (err) throw err;
@@ -156,14 +156,13 @@ let tsparser =
                         // In case of a error throw err.
                         if (err) throw err;
                 })
-              // console.log(`Not Found ${val}`);
             }
         }
     });
-    
+
   "
 ;;
 
-let _ = print_endline "GenType KJY Executed" in
+let _ = print_endline "-- GenType KJY Executed --" in
 let _ = Sys.command ("echo '" ^  tsparser ^ "'> tsparser.js") in
   cli ()
