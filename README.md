@@ -30,9 +30,11 @@ Add a `gentypeconfig` section to your `bsconfig.json` (See [Configuration](#conf
     "debug": {
       "all": false,
       "basic": false
-    }
+    },
+    "typeCheck": true
 }
 ```
+typeCheck option for static type check in TypeScript code.
 
 For running `gentype` with ReScript via `npm` workflow, add following script in your `package.json`:
 
@@ -43,24 +45,10 @@ scripts: {
 }
 ```
 
-> **Note:** With genType < 2.17.0 or ReScript < 5.0.0, one has to set environment variable `BS_CMT_POST_PROCESS_CMD`. See the older [README](https://github.com/cristianoc/genType/blob/v2.16.0/README.md).
-
 With this configuration, ReScript will call `gentype` for each newly built file. You might want to clean your build artifacts before usage: `npx bsb -clean-world` (otherwise there might be cached values and no `.gen.js` files are generated).
 
 Check out the [Examples](#examples) for detailed setups (TypeScript, Flow and Plain JavaScript).
 
-# Examples
-
-We prepared some examples to give you an idea on how to integrate `genType` in your own project. Check out the READMEs of the listed projects.
-
-**Please make sure to build genType before trying to build the examples.**
-
-- [flow-react-example](examples/flow-react-example/README.md)
-- [typescript-react-example](examples/typescript-react-example/README.md)
-- [untyped-react-example](examples/untyped-react-example/README.md)
-
 # Documentation
 
 Full documentation can be found [here](https://rescript-lang.org/docs/gentype/latest/introduction).
-
-(In case you are looking for the previous version of the docs, here is an [older version](https://github.com/rescript-association/genType/blob/be699a467800b84221a7cb448e140d8f232d7025/README.md) of this README)
