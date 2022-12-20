@@ -204,49 +204,49 @@ let rec emitCodeItem ~config ~emitters ~moduleItemsEmitter ~env ~fileName
     let converter = type_ |> typeGetConverter in
     let valueNameTypeChecked = valueName ^ "TypeChecked" in
     (* TypeChecked!! *)
-    let typeComment = (match config.language with
-    | TypeScript -> begin 
-      let open Filename in
-      let targetTSFile = (outputFileRelative |> dirname) ^ "/" ^ (ImportPath.importPathToStr importPath) in (* without extension! *)
-      let commandss = ("node tsparser.js ../../" ^ (targetTSFile) ^ " " ^ valueName ) in
-      let typeCommentHeader = ( "/* " ^ valueName ^ " | TS: [") in
-      let _ = Sys.command commandss in
-      let typeTS = begin
-        try 
-            let ic = open_in (valueName ^ ".temp.txt") in
-            let line = input_line ic in
-              (* read line, discard \n *)
-              close_in ic;
-              line 
-          with e ->
-            (* some unexpected exception occurs *)
-            ""
-      end in
-      let typeRes = (type_ |> EmitType.typeToString ~config ~typeNameIsInterface) in
-      let _ = 
-        (* typeTS, typeRes comparison *)
-        if String.equal typeTS typeRes then
-          ()
-        else begin
+    (******* TYPESCRIPT PARSING **********)
+    let typeComment = if config.typeCheck then begin
+      (match config.language with
+        | TypeScript -> begin 
+          let open Filename in
+          let targetTSFile = (outputFileRelative |> dirname) ^ "/" ^ (ImportPath.importPathToStr importPath) in (* without extension! *)
+          let commandss = ("node tsparser.js ../../" ^ (targetTSFile) ^ " " ^ valueName ) in
+          let typeCommentHeader = ( "\n/* " ^ valueName ^ " | TS: [") in
+          let _ = Sys.command commandss in
+          let typeTS = begin
+            try 
+                let ic = open_in (valueName ^ ".temp.txt") in
+                let line = input_line ic in
+                  (* read line, discard \n *)
+                  close_in ic;
+                  line 
+              with e ->
+                (* some unexpected exception occurs *)
+                ""
+          end in
+          let typeRes = (type_ |> EmitType.typeToString ~config ~typeNameIsInterface) in
           let _ = 
-            if String.equal typeRes "unknown" then begin
-            (print_endline ("[WARNING] (TS)" ^ typeTS ^ " and type annotation is unknown in Rescript!"))
-            end else begin
-              (* Something Complicated String Parsing Logic Goes Here *)
-              (print_endline ("[ERROR] (TS)" ^ typeTS ^ " and (Res)" ^ typeRes ^ " may not be matched!"))
+            (* typeTS, typeRes comparison *)
+            if String.equal typeTS typeRes then
+              ()
+            else begin
+              let _ = 
+                if String.equal typeRes "unknown" then begin
+                (print_endline ("[WARNING] (TS)" ^ typeTS ^ " and type annotation is unknown in Rescript!"))
+                end else begin
+                  (* Something Complicated String Parsing Logic Goes Here *)
+                  (print_endline ("[ERROR] (TS)" ^ typeTS ^ " and (Res)" ^ typeRes ^ " may not be matched!"))
+                end
+              in 
+                ()
             end
-          in 
-            ()
+          in
+          let typeComment = typeCommentHeader ^ typeTS ^ ("]" ^ " | RES: [" ^ typeRes ^ "] */")  in
+            (typeComment)
         end
-      in
-      let typeComment = typeCommentHeader ^ typeTS ^ ("]" ^ " | RES: [" ^ typeRes ^ "] */")  in
-        (typeComment)
-    end
-    | _ -> "") in
-    
-    (* let _ = print_endline ("IMPORT PATH : " ^ importFile) in (* MyMath *) *)
-    (* let _ = print_endline ("IMPORT PATH : " ^ importFileVariable) in (* $$MyMath *) *)
-    (* let _ = print_endline ("IMPORT PATH : " ^ importedAsName) in roundNotChecked *)
+        | _ -> ""
+      ) end else "" in
+    (******* TYPESCRIPT PARSING **********)
     let emitters =
       (importedAsName ^ restOfPath) ^ ";"
       |> EmitType.emitExportConstEarly ~config
@@ -256,7 +256,7 @@ let rec emitCodeItem ~config ~emitters ~moduleItemsEmitter ~env ~fileName
              ^ (fileName |> ModuleName.toString)
              ^ ".re'" ^ " and '"
              ^ (importPath |> ImportPath.emit ~config)
-             ^ "'." ^ "\n" ^ typeComment)
+             ^ "'." ^ typeComment)
            ~emitters ~name:valueNameTypeChecked ~type_ ~typeNameIsInterface
     in
     let valueNameNotDefault =

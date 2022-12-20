@@ -13,7 +13,8 @@
       "all": false
     },
     "exportInterfaces": false,
-    "path": "../../_build/default/src/GenType.exe"
+    "path": "../../_build/default/src/GenType.exe",
+    "typeCheck": true
   },
   "name": "sample-typescript-app",
   "bsc-flags": ["-bs-super-errors"],

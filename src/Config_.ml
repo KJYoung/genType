@@ -26,6 +26,7 @@ type config = {
   shimsMap : ModuleName.t ModuleNameMap.t;
   sources : Ext_json_types.t option;
   suffix : string;
+  typeCheck : bool;
 }
 
 let default =
@@ -47,6 +48,7 @@ let default =
     shimsMap = ModuleNameMap.empty;
     sources = None;
     suffix = "";
+    typeCheck = false;
   }
 
 let bsPlatformLib ~config =
@@ -111,6 +113,7 @@ let readConfig ~bsVersion ~getBsConfigFile ~namespace =
     let importPathString = gtconf |> getString "importPath" in
     let bsCurryPathString = gtconf |> getString "bsCurryPath" in
     let exportInterfacesBool = gtconf |> getBool "exportInterfaces" in
+    let typeCheckBool = gtconf |> getBool "typeCheck" in
     let generatedFileExtensionStringOption =
       gtconf |> getStringOption "generatedFileExtension"
     in
@@ -225,6 +228,11 @@ let readConfig ~bsVersion ~getBsConfigFile ~namespace =
       | Some sourceItem -> Some sourceItem
       | _ -> default.sources
     in
+    let typeCheck =
+      match typeCheckBool with
+      | None -> default.typeCheck
+      | Some b -> b
+    in
     {
       bsCurryPath;
       bsDependencies;
@@ -243,6 +251,7 @@ let readConfig ~bsVersion ~getBsConfigFile ~namespace =
       platformLib;
       shimsMap;
       sources;
+      typeCheck;
     }
   in
   match getBsConfigFile () with
