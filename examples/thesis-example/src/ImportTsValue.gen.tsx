@@ -387,7 +387,7 @@ export const funcInt2IntTypeChecked: (_1:number) => number = funcInt2IntNotCheck
 export const funcInt2Int: unknown = funcInt2IntTypeChecked as (_1:number) => number;
 
 // In case of type error, check the type of 'funcStr2Array' in 'ImportTsValue.re' and './TypeRepertoire'.
-/* funcStr2Array | TS: [(str:string) => Undefined 174] | RES: [(_1:string) => number[]] */
+/* funcStr2Array | TS: [(str:string) => number[]] | RES: [(_1:string) => number[]] */
 export const funcStr2ArrayTypeChecked: (_1:string) => number[] = funcStr2ArrayNotChecked;
 
 // Export 'funcStr2Array' early to allow circular import from the '.bs.js' file.
