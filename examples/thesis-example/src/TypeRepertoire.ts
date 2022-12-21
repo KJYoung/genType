@@ -57,6 +57,10 @@ export const same2string = function(same : type1 | type2): string {
   return 'string';
 }
 
+// imported
+import { importedFromTS } from "./TypeScript";
+export const exportImport = importedFromTS;
+
 
 // interface
 interface interface1 {

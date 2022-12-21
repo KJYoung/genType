@@ -25,7 +25,7 @@ function roundFromTS(prim) {
   return RescriptExampleGen.myRound(prim);
 }
 
-var roundedValueTS = RescriptExampleGen.myRound(3.74);
+var roundedValueTS = RescriptExampleGen.myRound("Not a Float");
 
 console.log("JavaScript", roundedValueJS);
 

@@ -90,6 +90,8 @@ import {intORstrORnull as intORstrORnullNotChecked} from './TypeRepertoire';
 
 import {unions as unionsNotChecked} from './TypeRepertoire';
 
+import {exportImport as exportImportNotChecked} from './TypeRepertoire';
+
 import {returnMixedArray as returnMixedArrayNotChecked} from './TypeRepertoire';
 
 import {useColor as useColorNotChecked} from './TypeRepertoire';
@@ -359,7 +361,7 @@ export const intstrTuple2TypeChecked: [number, string] = intstrTuple2NotChecked;
 export const intstrTuple2: unknown = intstrTuple2TypeChecked as [number, string];
 
 // In case of type error, check the type of 'enumValue' in 'ImportTsValue.re' and './TypeRepertoire'.
-/* enumValue | TS: [Undefined 194] | RES: [number] */
+/* enumValue | TS: [$Undefined194] | RES: [number] */
 export const enumValueTypeChecked: number = enumValueNotChecked;
 
 // Export 'enumValue' early to allow circular import from the '.bs.js' file.
@@ -414,6 +416,13 @@ export const unionsTypeChecked: complexUnion = unionsNotChecked;
 // Export 'unions' early to allow circular import from the '.bs.js' file.
 export const unions: unknown = unionsTypeChecked as complexUnion;
 
+// In case of type error, check the type of 'exportImport' in 'ImportTsValue.re' and './TypeRepertoire'.
+/* exportImport | TS: [$Imported] | RES: [number] */
+export const exportImportTypeChecked: number = exportImportNotChecked;
+
+// Export 'exportImport' early to allow circular import from the '.bs.js' file.
+export const exportImport: unknown = exportImportTypeChecked as number;
+
 // In case of type error, check the type of 'returnMixedArray' in 'ImportTsValue.re' and './TypeRepertoire'.
 /* returnMixedArray | TS: [() => Array<(number|string)>] | RES: [() => numberOrString[]] */
 export const returnMixedArrayTypeChecked: () => numberOrString[] = returnMixedArrayNotChecked;
@@ -422,7 +431,7 @@ export const returnMixedArrayTypeChecked: () => numberOrString[] = returnMixedAr
 export const returnMixedArray: unknown = returnMixedArrayTypeChecked as () => numberOrString[];
 
 // In case of type error, check the type of 'useColor' in 'ImportTsValue.re' and './TypeRepertoire'.
-/* useColor | TS: [(x:(Undefined 187|Undefined 187)) => number] | RES: [(_1:color) => number] */
+/* useColor | TS: [(x:($Undefined187|$Undefined187)) => number] | RES: [(_1:color) => number] */
 export const useColorTypeChecked: (_1:color) => number = useColorNotChecked;
 
 // Export 'useColor' early to allow circular import from the '.bs.js' file.

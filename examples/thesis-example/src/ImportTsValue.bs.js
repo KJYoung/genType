@@ -99,6 +99,8 @@ var intORstrORnull = ImportTsValueGen$1.intORstrORnull;
 
 var unions = ImportTsValueGen$1.unions;
 
+var exportImport = ImportTsValueGen$1.exportImport;
+
 function returnMixedArray(prim) {
   return ImportTsValueGen$1.returnMixedArray();
 }
@@ -187,6 +189,7 @@ export {
   funcPoint2PointExact ,
   intORstrORnull ,
   unions ,
+  exportImport ,
   returnMixedArray ,
   AbsoluteValue ,
   useGetProp ,

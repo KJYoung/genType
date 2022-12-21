@@ -16,14 +16,34 @@ let displayStr = (fruit, ~msg, ~loop) => {
 displayStr(fruitInstance, ~msg=greetingStr, ~loop=3);
 
 
+// // JavaScript Math.round Import ( Wrong Type Annotation )
+// @val external math: { "round" : string => int } = "Math"
+// let roundedValueJS = math["round"](3.74)
+
+// // JavaScript Math.round Import ( Wrong Type Annotation )
+// @val external math: { "round" : float => string } = "Math"
+
+
+// let roundedValueJS = math["round"](3.74)
+
 // JavaScript Math.round Import
 @val external math: { "round" : float => int } = "Math"
 let roundedValueJS = math["round"](3.74)
 
-// TypeScript Custom round function Import
+// // TypeScript Custom round function Import
+// @genType.import("./TypeScript")
+// external roundFromTS: float => int = "myRound"
+// let roundedValueTS = roundFromTS(3.74)
+
+// // TypeScript Custom round function Import (Wrong Type Annotation)
+// @genType.import("./TypeScript")
+// external roundFromTS: string => int = "myRound"
+// let roundedValueTS = roundFromTS(3.74)
+
+// TypeScript Custom round function Import (Wrong Type Annnotation)
 @genType.import("./TypeScript")
-external roundFromTS: float => int = "myRound"
-let roundedValueTS = roundFromTS(3.74)
+external roundFromTS: string => string = "myRound"
+let roundedValueTS = roundFromTS("Not a Float")
   
 Js.log2("JavaScript", roundedValueJS)
 Js.log2("TypeScript", roundedValueTS)

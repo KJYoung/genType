@@ -162,6 +162,9 @@ external intORstrORnull : numberOrStringOrNull = "intORstrORnull"
 @genType.import("./TypeRepertoire")
 external unions : complexUnion = "unions"
 
+// imported 
+@genType.import("./TypeRepertoire")
+external exportImport : int = "exportImport"
 
 // original MyMath ************************************************************
 @genType.import("./TypeRepertoire")
