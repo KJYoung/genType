@@ -15,3 +15,29 @@ let displayStr = (fruit, ~msg, ~loop) => {
 
 displayStr(fruitInstance, ~msg=greetingStr, ~loop=3);
 
+
+// JavaScript Math.round Import
+@val external math: { "round" : float => int } = "Math"
+let roundedValueJS = math["round"](3.74)
+
+// TypeScript Custom round function Import
+@genType.import("./TypeScript")
+external roundFromTS: float => int = "myRound"
+let roundedValueTS = roundFromTS(3.74)
+  
+Js.log2("JavaScript", roundedValueJS)
+Js.log2("TypeScript", roundedValueTS)
+
+
+// JavaScript Math.round Import
+@val external mathCorrect: { "round" : float => int } = "Math"
+@val external mathWrong1: { "round" : float => string } = "Math"
+@val external mathWrong2: { "round" : float => unit } = "Math"
+
+let rounded1 = mathCorrect["round"](3.5)
+let rounded2 = mathWrong1["round"](3.5)
+let rounded3 = mathWrong2["round"](3.5)
+
+Js.log(rounded1)
+Js.log(rounded2)
+Js.log(rounded3)

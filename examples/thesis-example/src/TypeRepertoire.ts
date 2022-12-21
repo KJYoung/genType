@@ -39,6 +39,9 @@ export const funcStr2Array = function(str: string): number[] {  // string => num
 export const funcPoint2Point = function(point: pointOptional): pointRequired {  // pointOptional => pointRequired
   return { x: 1, y: 3};
 }
+export const anotherFunction = (num : number) : number => {
+  return Math.round(num);
+}
 
 // union types
 export const intORstrORnull: number | string | null = 3; 
