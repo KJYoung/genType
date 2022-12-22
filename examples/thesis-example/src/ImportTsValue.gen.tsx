@@ -46,7 +46,17 @@ import {opValue24 as opValue24NotChecked} from './TypeBasics';
 
 import {opValue25 as opValue25NotChecked} from './TypeBasics';
 
+import {opValue26 as opValue26NotChecked} from './TypeBasics';
+
 import {opValue27 as opValue27NotChecked} from './TypeBasics';
+
+import {varBoolean as varBooleanNotChecked} from './TypeBasics';
+
+import {opValue27_2 as opValue27_2NotChecked} from './TypeBasics';
+
+import {opValue23_2 as opValue23_2NotChecked} from './TypeBasics';
+
+import {opValue23_3 as opValue23_3NotChecked} from './TypeBasics';
 
 import {opValue31 as opValue31NotChecked} from './TypeBasics';
 
@@ -81,6 +91,8 @@ import {objectSimple as objectSimpleNotChecked} from './TypeRepertoire';
 import {objectComplex as objectComplexNotChecked} from './TypeRepertoire';
 
 import {funcInt2Int as funcInt2IntNotChecked} from './TypeRepertoire';
+
+import {funcInt2IntImplicit as funcInt2IntImplicitNotChecked} from './TypeRepertoire';
 
 import {funcStr2Array as funcStr2ArrayNotChecked} from './TypeRepertoire';
 
@@ -262,12 +274,47 @@ export const opValue25TypeChecked: string = opValue25NotChecked;
 // Export 'opValue25' early to allow circular import from the '.bs.js' file.
 export const opValue25: unknown = opValue25TypeChecked as string;
 
+// In case of type error, check the type of 'opValue26' in 'ImportTsValue.re' and './TypeBasics'.
+/* opValue26 | TS: [boolean] | RES: [boolean] */
+export const opValue26TypeChecked: boolean = opValue26NotChecked;
+
+// Export 'opValue26' early to allow circular import from the '.bs.js' file.
+export const opValue26: unknown = opValue26TypeChecked as boolean;
+
 // In case of type error, check the type of 'opValue27' in 'ImportTsValue.re' and './TypeBasics'.
 /* opValue27 | TS: [boolean | number] | RES: [unknown] */
 export const opValue27TypeChecked: unknown = opValue27NotChecked;
 
 // Export 'opValue27' early to allow circular import from the '.bs.js' file.
 export const opValue27: unknown = opValue27TypeChecked as unknown;
+
+// In case of type error, check the type of 'varBoolean' in 'ImportTsValue.re' and './TypeBasics'.
+/* varBoolean | TS: [boolean] | RES: [boolean] */
+export const varBooleanTypeChecked: boolean = varBooleanNotChecked;
+
+// Export 'varBoolean' early to allow circular import from the '.bs.js' file.
+export const varBoolean: unknown = varBooleanTypeChecked as boolean;
+
+// In case of type error, check the type of 'opValue27_2' in 'ImportTsValue.re' and './TypeBasics'.
+/* opValue27_2 | TS: [boolean | number] | RES: [unknown] */
+export const opValue27_2TypeChecked: unknown = opValue27_2NotChecked;
+
+// Export 'opValue27_2' early to allow circular import from the '.bs.js' file.
+export const opValue27_2: unknown = opValue27_2TypeChecked as unknown;
+
+// In case of type error, check the type of 'opValue23_2' in 'ImportTsValue.re' and './TypeBasics'.
+/* opValue23_2 | TS: [boolean | number] | RES: [unknown] */
+export const opValue23_2TypeChecked: unknown = opValue23_2NotChecked;
+
+// Export 'opValue23_2' early to allow circular import from the '.bs.js' file.
+export const opValue23_2: unknown = opValue23_2TypeChecked as unknown;
+
+// In case of type error, check the type of 'opValue23_3' in 'ImportTsValue.re' and './TypeBasics'.
+/* opValue23_3 | TS: [boolean | number] | RES: [unknown] */
+export const opValue23_3TypeChecked: unknown = opValue23_3NotChecked;
+
+// Export 'opValue23_3' early to allow circular import from the '.bs.js' file.
+export const opValue23_3: unknown = opValue23_3TypeChecked as unknown;
 
 // In case of type error, check the type of 'opValue31' in 'ImportTsValue.re' and './TypeBasics'.
 /* opValue31 | TS: [string] | RES: [string] */
@@ -388,6 +435,13 @@ export const funcInt2IntTypeChecked: (_1:number) => number = funcInt2IntNotCheck
 // Export 'funcInt2Int' early to allow circular import from the '.bs.js' file.
 export const funcInt2Int: unknown = funcInt2IntTypeChecked as (_1:number) => number;
 
+// In case of type error, check the type of 'funcInt2IntImplicit' in 'ImportTsValue.re' and './TypeRepertoire'.
+/* funcInt2IntImplicit | TS: [(num:number) => $UndefinedINIT] | RES: [(_1:number) => number] */
+export const funcInt2IntImplicitTypeChecked: (_1:number) => number = funcInt2IntImplicitNotChecked;
+
+// Export 'funcInt2IntImplicit' early to allow circular import from the '.bs.js' file.
+export const funcInt2IntImplicit: unknown = funcInt2IntImplicitTypeChecked as (_1:number) => number;
+
 // In case of type error, check the type of 'funcStr2Array' in 'ImportTsValue.re' and './TypeRepertoire'.
 /* funcStr2Array | TS: [(str:string) => number[]] | RES: [(_1:string) => number[]] */
 export const funcStr2ArrayTypeChecked: (_1:string) => number[] = funcStr2ArrayNotChecked;
@@ -482,15 +536,9 @@ import type {colorEnum as $$colorEnum} from './TypeRepertoire';
 
 import type {complexUnion as $$complexUnion} from './TypeRepertoire';
 
-import type {num as $$myNum} from './TypeRepertoire';
-
-import type {num as $$num} from './TypeRepertoire';
-
 import type {numberOrStringOrNull as $$numberOrStringOrNull} from './TypeRepertoire';
 
 import type {numberOrString as $$numberOrString} from './TypeRepertoire';
-
-import type {polyType as $$polyType} from './TypeRepertoire';
 
 // tslint:disable-next-line:interface-over-type-literal
 export type numberOrString = $$numberOrString;
@@ -526,15 +574,6 @@ export type color = "tomato" | "gray";
 export type variant = 
     { tag: "I"; value: number }
   | { tag: "S"; value: string };
-
-// tslint:disable-next-line:interface-over-type-literal
-export type num = $$num;
-
-// tslint:disable-next-line:interface-over-type-literal
-export type myNum = $$myNum;
-
-// tslint:disable-next-line:interface-over-type-literal
-export type polyType<a> = $$polyType<a>;
 
 export default $$default;
 

@@ -53,7 +53,18 @@ external opValue24: float = "opValue24"
 @genType.import("./TypeBasics")
 external opValue25: string = "opValue25"
 @genType.import("./TypeBasics")
+external opValue26: bool = "opValue26"
+@genType.import("./TypeBasics")
 external opValue27: unknown = "opValue27"
+
+@genType.import("./TypeBasics")
+external varBoolean: bool = "varBoolean"
+@genType.import("./TypeBasics")
+external opValue27_2: unknown = "opValue27_2"
+@genType.import("./TypeBasics")
+external opValue23_2: unknown = "opValue23_2"
+@genType.import("./TypeBasics")
+external opValue23_3: unknown = "opValue23_3"
 
 // any => string operations
 @genType.import("./TypeBasics")
@@ -138,6 +149,9 @@ external objectComplex: objectComplexT  = "objectComplex"
 @genType.import("./TypeRepertoire")
 external funcInt2Int: int => int = "funcInt2Int"
 
+@genType.import("./TypeRepertoire")
+external funcInt2IntImplicit: int => int = "funcInt2IntImplicit"
+
 let funcInt2IntRet = funcInt2Int(5)
 
 @genType.import("./TypeRepertoire")
@@ -186,12 +200,3 @@ type variant =
 @genType.import("./TypeRepertoire") external polymorphic: 'a => 'a = "polymorphic"
 
 @genType.import("./TypeRepertoire") external default: int = "default"
-
-@genType.import(("./TypeRepertoire", "num"))
-type num
-
-@genType.import(("./TypeRepertoire", "num"))
-type myNum
-
-@genType.import("./TypeRepertoire")
-type polyType<'a>

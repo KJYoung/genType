@@ -31,7 +31,7 @@ export const opValue25 = false || "string"     // string
 export const opValue26 = false && 3.4;         // boolean
 export const opValue27 = (integerValue < 33) && integerValue; // boolean | number
 
-export const varBoolean = (integerValue < 33);
+export const varBoolean = (integerValue < 33); // boolean
 export const opValue27_2 = varBoolean && integerValue; // boolean | number
 export const opValue23_2 = varBoolean ? true : 3; // boolean | number
 export const opValue23_3 = varBoolean && integerValue; // boolean | number

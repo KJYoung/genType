@@ -47,7 +47,17 @@ var opValue24 = ImportTsValueGen$1.opValue24;
 
 var opValue25 = ImportTsValueGen$1.opValue25;
 
+var opValue26 = ImportTsValueGen$1.opValue26;
+
 var opValue27 = ImportTsValueGen$1.opValue27;
+
+var varBoolean = ImportTsValueGen$1.varBoolean;
+
+var opValue27_2 = ImportTsValueGen$1.opValue27_2;
+
+var opValue23_2 = ImportTsValueGen$1.opValue23_2;
+
+var opValue23_3 = ImportTsValueGen$1.opValue23_3;
 
 var opValue31 = ImportTsValueGen$1.opValue31;
 
@@ -83,6 +93,10 @@ var objectComplex = ImportTsValueGen$1.objectComplex;
 
 function funcInt2Int(prim) {
   return ImportTsValueGen$1.funcInt2Int(prim);
+}
+
+function funcInt2IntImplicit(prim) {
+  return ImportTsValueGen$1.funcInt2IntImplicit(prim);
 }
 
 var funcInt2IntRet = ImportTsValueGen$1.funcInt2Int(5);
@@ -150,7 +164,12 @@ export {
   opValue23 ,
   opValue24 ,
   opValue25 ,
+  opValue26 ,
   opValue27 ,
+  varBoolean ,
+  opValue27_2 ,
+  opValue23_2 ,
+  opValue23_3 ,
   opValue31 ,
   opValue32 ,
   opValue33 ,
@@ -168,6 +187,7 @@ export {
   objectSimple ,
   objectComplex ,
   funcInt2Int ,
+  funcInt2IntImplicit ,
   funcInt2IntRet ,
   funcStr2Array ,
   funcPoint2PointExact ,
