@@ -361,7 +361,7 @@ export const intstrTuple2TypeChecked: [number, string] = intstrTuple2NotChecked;
 export const intstrTuple2: unknown = intstrTuple2TypeChecked as [number, string];
 
 // In case of type error, check the type of 'enumValue' in 'ImportTsValue.re' and './TypeRepertoire'.
-/* enumValue | TS: [$Undefined194] | RES: [number] */
+/* enumValue | TS: [$NotChecked194] | RES: [number] */
 export const enumValueTypeChecked: number = enumValueNotChecked;
 
 // Export 'enumValue' early to allow circular import from the '.bs.js' file.
@@ -431,7 +431,7 @@ export const returnMixedArrayTypeChecked: () => numberOrString[] = returnMixedAr
 export const returnMixedArray: unknown = returnMixedArrayTypeChecked as () => numberOrString[];
 
 // In case of type error, check the type of 'useColor' in 'ImportTsValue.re' and './TypeRepertoire'.
-/* useColor | TS: [(x:($Undefined187|$Undefined187)) => number] | RES: [(_1:color) => number] */
+/* useColor | TS: [(x:($NotChecked187|$NotChecked187)) => number] | RES: [(_1:color) => number] */
 export const useColorTypeChecked: (_1:color) => number = useColorNotChecked;
 
 // Export 'useColor' early to allow circular import from the '.bs.js' file.
@@ -472,7 +472,7 @@ export const polymorphicTypeChecked: <a>(_1:a) => a = polymorphicNotChecked;
 export const polymorphic: unknown = polymorphicTypeChecked as <a>(_1:a) => a;
 
 // In case of type error, check the type of 'default' in 'ImportTsValue.re' and './TypeRepertoire'.
-/* default | TS: [Default or NotFound] | RES: [number] */
+/* default | TS: [] | RES: [number] */
 export const defaultTypeChecked: number = defaultNotChecked;
 
 // Export '$$default' early to allow circular import from the '.bs.js' file.

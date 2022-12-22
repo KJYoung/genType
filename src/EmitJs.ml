@@ -210,12 +210,20 @@ let rec emitCodeItem ~config ~emitters ~moduleItemsEmitter ~env ~fileName
         | TypeScript -> begin 
           let open Filename in
           let targetTSFile = (outputFileRelative |> dirname) ^ "/" ^ (ImportPath.importPathToStr importPath) in (* without extension! *)
-          let commandss = ("node tsparser.js ../../" ^ (targetTSFile) ^ " " ^ valueName ) in
+          let commandss = ("node tsparser.js ../../" ^ (targetTSFile)) in
+          let targetTSFileLastSlash = (String.rindex targetTSFile '/') + 1 in
+          let targetTypeFile = ( String.sub targetTSFile targetTSFileLastSlash (String.length targetTSFile - targetTSFileLastSlash) ) ^ "_" ^ valueName ^ ".temp.txt" in
           let typeCommentHeader = ( "\n/* " ^ valueName ^ " | TS: [") in
-          let _ = Sys.command commandss in
+          let _ = 
+            if Sys.file_exists targetTypeFile then
+              0 
+            else
+              (* let _ = print_endline (targetTypeFile ^ " does not exist!") in *)
+              Sys.command commandss 
+          in
           let typeTS = begin
             try 
-                let ic = open_in (valueName ^ ".temp.txt") in
+                let ic = open_in targetTypeFile in
                 let line = input_line ic in
                   (* read line, discard \n *)
                   close_in ic;
@@ -226,19 +234,20 @@ let rec emitCodeItem ~config ~emitters ~moduleItemsEmitter ~env ~fileName
           end in
           let typeRes = (type_ |> EmitType.typeToString ~config ~typeNameIsInterface) in
           let _ = 
-            (* typeTS, typeRes comparison *)
-            if String.equal typeTS typeRes then
-              ()
+            (*********************************** typeTS, typeRes comparison ***********************************)
+            if String.contains typeTS '$' then
+              (* Some Error Detected or Not Implemented Yet *)
+              (print_endline ("[WARNING] (TS)" ^ typeTS ^ " : Target type is not covered yet."))
+            else if String.equal typeRes "unknown" then 
+              (* ReScript Type is treated as unknown. *)
+              (print_endline ("[WARNING] (TS)" ^ typeTS ^ " and type annotation is unknown in Rescript!"))
             else begin
-              let _ = 
-                if String.equal typeRes "unknown" then begin
-                (print_endline ("[WARNING] (TS)" ^ typeTS ^ " and type annotation is unknown in Rescript!"))
-                end else begin
-                  (* Something Complicated String Parsing Logic Goes Here *)
-                  (print_endline ("[ERROR] (TS)" ^ typeTS ^ " and (Res)" ^ typeRes ^ " may not be matched!"))
-                end
-              in 
+              (* Something Complicated String Parsing Logic Goes Here *)
+              if String.equal typeTS typeRes then ()
+              else if String.equal typeTS "" then (* Export Default from TypeScript *)
                 ()
+              else
+                (print_endline ("[ ERROR ] (TS)" ^ typeTS ^ " and (Res)" ^ typeRes ^ " may not be matched!"))
             end
           in
           let typeComment = typeCommentHeader ^ typeTS ^ ("]" ^ " | RES: [" ^ typeRes ^ "] */")  in
