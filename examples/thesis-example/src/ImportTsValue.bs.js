@@ -105,22 +105,6 @@ function returnMixedArray(prim) {
   return ImportTsValueGen$1.returnMixedArray();
 }
 
-function getAbs(x) {
-  return x.getAbs();
-}
-
-var AbsoluteValue = {
-  getAbs: getAbs
-};
-
-function useGetProp(x) {
-  return x.getProp() + 1 | 0;
-}
-
-function useGetAbs(x) {
-  return x.getAbs() + 1 | 0;
-}
-
 function useColor(prim) {
   return ImportTsValueGen$1.useColor(prim);
 }
@@ -191,9 +175,6 @@ export {
   unions ,
   exportImport ,
   returnMixedArray ,
-  AbsoluteValue ,
-  useGetProp ,
-  useGetAbs ,
   useColor ,
   higherOrder ,
   returnedFromHigherOrder ,

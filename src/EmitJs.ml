@@ -247,7 +247,8 @@ let rec emitCodeItem ~config ~emitters ~moduleItemsEmitter ~env ~fileName
               else if String.equal typeTS "" then (* Export Default from TypeScript *)
                 ()
               else
-                (print_endline ("[ ERROR ] (TS)" ^ typeTS ^ " and (Res)" ^ typeRes ^ " may not be matched!"))
+                (* (print_endline ("[ ERROR ] (TS)" ^ typeTS ^ " and (Res)" ^ typeRes ^ " may not be matched!")) *)
+                (print_endline ("[WARNING] (TS)" ^ typeTS ^ " and (Res)" ^ typeRes ^ " may not be matched!"))
             end
           in
           let typeComment = typeCommentHeader ^ typeTS ^ ("]" ^ " | RES: [" ^ typeRes ^ "] */")  in

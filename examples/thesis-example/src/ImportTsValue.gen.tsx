@@ -478,11 +478,6 @@ export const defaultTypeChecked: number = defaultNotChecked;
 // Export '$$default' early to allow circular import from the '.bs.js' file.
 export const $$default: unknown = defaultTypeChecked as number;
 
-// tslint:disable-next-line:no-var-requires
-const ImportTsValueBS = require('./ImportTsValue.bs');
-
-import type {AbsoluteValue as $$AbsoluteValue_t} from './TypeRepertoire';
-
 import type {colorEnum as $$colorEnum} from './TypeRepertoire';
 
 import type {complexUnion as $$complexUnion} from './TypeRepertoire';
@@ -496,8 +491,6 @@ import type {numberOrStringOrNull as $$numberOrStringOrNull} from './TypeReperto
 import type {numberOrString as $$numberOrString} from './TypeRepertoire';
 
 import type {polyType as $$polyType} from './TypeRepertoire';
-
-import type {stringFunction as $$stringFunction} from './TypeRepertoire';
 
 // tslint:disable-next-line:interface-over-type-literal
 export type numberOrString = $$numberOrString;
@@ -527,12 +520,6 @@ export type numberOrStringOrNull = $$numberOrStringOrNull;
 export type complexUnion = $$complexUnion;
 
 // tslint:disable-next-line:interface-over-type-literal
-export type AbsoluteValue_t = $$AbsoluteValue_t;
-
-// tslint:disable-next-line:interface-over-type-literal
-export type stringFunction = $$stringFunction;
-
-// tslint:disable-next-line:interface-over-type-literal
 export type color = "tomato" | "gray";
 
 // tslint:disable-next-line:interface-over-type-literal
@@ -548,14 +535,6 @@ export type myNum = $$myNum;
 
 // tslint:disable-next-line:interface-over-type-literal
 export type polyType<a> = $$polyType<a>;
-
-export const funcInt2IntRet: number = ImportTsValueBS.funcInt2IntRet;
-
-export const useGetProp: (x:AbsoluteValue_t) => number = ImportTsValueBS.useGetProp;
-
-export const useGetAbs: (x:AbsoluteValue_t) => number = ImportTsValueBS.useGetAbs;
-
-export const returnedFromHigherOrder: number = ImportTsValueBS.returnedFromHigherOrder;
 
 export default $$default;
 

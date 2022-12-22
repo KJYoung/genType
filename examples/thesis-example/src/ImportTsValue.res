@@ -138,7 +138,7 @@ external objectComplex: objectComplexT  = "objectComplex"
 @genType.import("./TypeRepertoire")
 external funcInt2Int: int => int = "funcInt2Int"
 
-@genType let funcInt2IntRet = funcInt2Int(5)
+let funcInt2IntRet = funcInt2Int(5)
 
 @genType.import("./TypeRepertoire")
 external funcStr2Array: string => array<int> = "funcStr2Array"
@@ -170,34 +170,12 @@ external exportImport : int = "exportImport"
 @genType.import("./TypeRepertoire")
 external returnMixedArray: unit => array<numberOrString> = "returnMixedArray"
 
-module AbsoluteValue = {
-  @genType.import(("./TypeRepertoire", "AbsoluteValue"))
-  type t = {"getAbs": (. unit) => int}
-
-  /* This is untyped */
-  @send external getProp: t => int = "getProp"
-
-  /* This is also untyped, as we "trust" the type declaration in absoluteVaue */
-  let getAbs = (x: t) => {
-    let getAbs = x["getAbs"]
-    getAbs(.)
-  }
-}
-
-@genType let useGetProp = (x: AbsoluteValue.t) => x->AbsoluteValue.getProp + 1
-
-@genType let useGetAbs = (x: AbsoluteValue.t) => x->AbsoluteValue.getAbs + 1
-
-@genType.import("./TypeRepertoire")
-type stringFunction
-
-@genType type color = [#tomato | #gray]
-
+type color = [#tomato | #gray]
 @genType.import("./TypeRepertoire") external useColor: color => int = "useColor"
 
 @genType.import("./TypeRepertoire") external higherOrder: ((int, int) => int) => int = "higherOrder"
 
-@genType let returnedFromHigherOrder = higherOrder(\"+")
+let returnedFromHigherOrder = higherOrder(\"+")
 
 type variant =
   | I(int)

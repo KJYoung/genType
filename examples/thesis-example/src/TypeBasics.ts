@@ -49,4 +49,4 @@ export const typeofInteger = typeof(3); // string
 class Bar {
 
 }
-export const instanceofTest = ({name2 : "James"} instanceof Bar);
+export const instanceofTest = ({name2 : "James"} instanceof Bar); // boolean
