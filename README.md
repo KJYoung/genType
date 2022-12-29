@@ -14,7 +14,7 @@ npm install --save-dev gentype
 
 Add a `gentypeconfig` section to your `bsconfig.json` (See [Configuration](#configuration) for details):
 
-```
+```json
 "gentypeconfig": {
     "language": "untyped",
     "shims": {},
@@ -31,7 +31,7 @@ typeCheck option for static type check in TypeScript code.
 
 This repository is for the basic(or slack) support for GenType's static type check.   
 The motivation was the absence of type checking for JavaScript or TypeScript import.   
-For example, assume a function `'myRound' : float => string` in TypeScript code(as TS has only number type, the exact type would be `number => number`) and assume one wants to import that function from ReScript code. Then, one can write codes as below.   
+For example, assume a function `myRound : float => string` in TypeScript code(as TS has only number type, the exact type would be `number => number`) and assume one wants to import that function from ReScript code. Then, one can write codes as below.   
 
 ```ReScript
 @genType.import("./myMath")
