@@ -27,6 +27,11 @@ Add a `gentypeconfig` section to your `bsconfig.json` (See [Configuration](#conf
 ```
 typeCheck option for static type check in TypeScript code.   
 
+# Execution
+At genType/ `npm run build`
+At genType/node-typescript-parser `npm run build`
+At genType/examples/thesis-example `npm run start` and save `.res` files to trigger compilation.
+
 # Additional Documentation
 
 This repository is for the basic(or slack) support for GenType's static type check.   
